@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/dFacNro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Historial cliente"
+        android:textColor="@color/Negro"
+        android:textSize="25dp"
+        />
+    <Button
+        android:id="@+id/AutoDot"
+        android:textAllCaps="false"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:background="@color/Color1"
+        android:layout_width="wrap_content"
+        android:textColor="@color/Blanco"
+        android:layout_height="wrap_content"
+        android:text="Autorizar dotación"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="#A8A8A8"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:lines="1"
+            android:padding="5dp"
+            android:text="Documento"
+            android:background="#D1D1D1"
+            android:textColor="@color/GrisLetra"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+
+            android:lines="1"
+            android:padding="5dp"
+            android:text="Fecha"
+            android:textAlignment="center"
+            android:background="#D1D1D1"
+            android:textColor="@color/GrisLetra"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+
+            android:lines="1"
+            android:padding="5dp"
+            android:text="Total"
+            android:background="#D1D1D1"
+            android:textAlignment="center"
+            android:textColor="@color/GrisLetra"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+android:textAlignment="center"
+            android:lines="1"
+            android:padding="5dp"
+            android:text="Ir"
+            android:background="#D1D1D1"
+            android:textColor="@color/GrisLetra"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+        <ListView
+            android:id="@+id/ListaHistorial"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+</LinearLayout>
+
+</FrameLayout>

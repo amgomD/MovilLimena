@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <supports-screens android:anyDensity="true" /> <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> comentado para subir a play store -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" /> <!-- <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" /> comentado para subir a play store -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <!--
+ <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> comentado para subir a play store
+    -->
+    <!--
+ <uses-permission
+        android:name="android.permission.CAMERA"
+        android:maxSdkVersion="18" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:maxSdkVersion="18" /> comentado para subir a play store
+    -->
+    <uses-permission
+        android:name="android.permission.MEDIA_CONTENT_CONTROL"
+        tools:ignore="ProtectedPermissions" />
+    <!--
+          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+          Google Maps Android API v2, but are recommended.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".SeleccionFecha"
+            android:exported="false"
+            android:label="@string/title_activity_seleccion_fecha" />
+        <activity
+            android:name=".wp_gestionpedido"
+            android:exported="false"
+            android:label="@string/title_activity_seleccion_fecha" />
+        <activity
+            android:name=".HistoricoVentas"
+            android:exported="false"
+            android:label="@string/title_activity_historico_ventas" />
+        <activity
+            android:name=".EnvioCartera"
+            android:exported="false"
+            android:label="EnvioCartera" />
+
+        <activity
+            android:name=".VerConsigna"
+            android:exported="false"
+            android:theme="@style/AppTheme.CustomTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize|adjustPan" />
+        <activity
+            android:name=".ConfirmarEnvioCon"
+            android:exported="false"
+            android:theme="@style/AppTheme.CustomTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize|adjustPan" />
+        <activity
+            android:name=".ResumenConsignacion"
+            android:exported="false"
+            android:label="@string/title_activity_resumen_consignacion" />
+        <activity
+            android:name=".InfoConsigna"
+            android:exported="false"
+            android:label="@string/title_activity_info_consigna" />
+        <activity
+            android:name=".ConsignacionEfectivo"
+            android:exported="false"
+            android:label="@string/title_activity_consignacion_efectivo" />
+        <activity
+            android:name=".ConfirmarRecibo"
+            android:exported="false"
+            android:theme="@style/AppTheme.CustomTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize|adjustPan" />
+        <activity
+            android:name=".EnvioReciboPendiente"
+            android:exported="false"
+            android:label="@string/title_activity_envio_recibo_pendiente" />
+        <activity
+            android:name=".SubirFotos"
+            android:exported="false"
+            android:label="@string/title_activity_main2" />
+        <activity
+            android:name=".BuscarBanco"
+            android:exported="false"
+            android:label="@string/title_activity_buscar_banco" />
+        <activity
+            android:name=".FormaPago"
+            android:exported="false"
+            android:label="@string/title_activity_forma_pago" />
+        <activity
+            android:name=".EditarAbono"
+            android:exported="false"
+            android:theme="@style/AppTheme.CustomTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize|adjustPan" />
+        <activity
+            android:name=".AbonarCartera"
+            android:exported="false"
+            android:label="@string/title_activity_forma_pago" />
+        <activity
+            android:name=".EditarProductoAsync"
+            android:exported="false"
+            android:label="@string/title_activity_editar_productos_async" />
+        <activity
+            android:name=".ConfirmarEnvio"
+            android:label="@string/title_activity_confirmar_envio"
+            android:theme="@style/AppTheme.CustomTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize|adjustPan" />
+        <activity
+            android:name=".DescuentosFicc"
+            android:exported="false"
+            android:label="@string/title_activity_descuentos_ficc" />
+        <activity
+            android:name=".DetalleFactura"
+            android:exported="false"
+            android:label="@string/title_activity_detalle_factura" />
+        <activity
+            android:name=".HistorialClientev2"
+            android:exported="false"
+            android:label="@string/title_activity_historial_clientev2" />
+        <activity
+            android:name=".InventarioAgrupado"
+            android:exported="false"
+            android:label="@string/title_activity_inventario_agrupado"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".confirmacargue"
+            android:theme="@style/AppTheme.CustomTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize|adjustPan" />
+        <activity
+            android:name=".importarpedido"
+            android:exported="false"
+            android:label="@string/title_activity_importarpedido"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".VerificacionPedido"
+            android:exported="false"
+            android:label="@string/title_activity_verificacion_pedido" />
+        <activity
+            android:name=".enviospendientes"
+            android:exported="false"
+            android:label="@string/title_activity_enviospendientes" />
+        <activity android:name=".SoporteRecibo" />
+        <activity android:name=".ImprimirRecibo" />
+        <activity android:name=".DescargarCartera" />
+        <activity android:name=".Director" />
+        <activity android:name=".Soporte" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ResumenLinea" />
+        <activity android:name=".CrearDireccion" />
+        <activity android:name=".Historial" />
+        <activity android:name=".ClientesNuevos" />
+        <activity android:name=".Configuraciones" />
+        <activity android:name=".EscaneoV5" />
+        <activity android:name=".BarcodePDF" />
+        <activity android:name=".RegistroPedidoV2" />
+        <activity android:name=".EditarProductoV2" />
+        <activity android:name=".InformeDiario" />
+        <activity android:name=".Escaneov3" />
+        <!--
+                <meta-data
+                    android:name="com.google.android.gms.version"
+                    android:value="@integer/google_play_services_version" />
+                <meta-data
+                    android:name="com.google.android.gms.vision.DEPENDENCIES"
+                    android:value="barcode" />
+        -->
+        <activity android:name=".EscaneoV2" />
+        <activity android:name=".EscanearDocumento" />
+        <activity android:name=".BuscarBarrioCiudad" />
+        <activity android:name=".CreacionCliente" />
+        <activity android:name=".CreacionClienteTra" />
+        <activity android:name=".ResumenPedidosDia" />
+        <activity android:name=".ResumenPedidosV2" />
+        <activity android:name=".Wp_ResumenPedidosnew" />
+        <activity android:name=".ResumenPedidoEnv" />
+        <activity android:name=".ResumenPedidoEnvV2" />
+        <activity android:name=".ResumenRecibosDia" />
+        <activity
+            android:name=".EditarCantidad"
+            android:theme="@style/AppTheme.Panel"
+            android:windowSoftInputMode="stateVisible|adjustResize|adjustPan" />
+        <activity
+            android:name=".EditarCantidadInf"
+            android:theme="@style/AppTheme.CustomTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize|adjustPan" />
+        <activity
+            android:name=".CapturaPedido"
+            android:windowSoftInputMode="stateVisible|adjustResize|adjustPan" />
+        <activity
+            android:name=".ResumenPedido"
+            android:theme="@style/AppTheme.Panel"
+            android:windowSoftInputMode="stateVisible|adjustResize|adjustPan" />
+        <activity android:name=".VentasxFamilia" />
+        <activity android:name=".VentasxSubGrupo" />
+        <activity android:name=".ComportamientoVenta"
+            android:theme="@style/AppTheme.Panel"
+            android:windowSoftInputMode="stateVisible|adjustResize|adjustPan" />
+        <activity android:name=".BannerDescuentos" />
+        <activity android:name=".visitacliente" />
+        <activity android:name=".Cartera" />
+        <activity android:name=".DatosCliente"        android:theme="@style/AppTheme.Panel"
+            android:windowSoftInputMode="stateVisible|adjustResize|adjustPan" />
+        <activity android:name=".ClientesPedido" />
+        <activity android:name=".Sincronizar" />
+        <activity android:name=".Principal" />
+
+
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.ficc.mwmovil.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+    </application>
+
+</manifest>

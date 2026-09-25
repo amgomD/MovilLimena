@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".DatosCliente">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+       android:layout_gravity="center"
+            android:background="@color/Blanco"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <ImageView
+                    android:src="@mipmap/cliente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/txt_nit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        
+                        android:text="TextView" />
+                    <TextView
+                        android:id="@+id/txt_nombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        
+                        android:maxLines="3"
+                        android:textColor="@color/Negro"
+                        android:text="TextView" />
+                    <TextView
+                        android:id="@+id/txt_razonsocial"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        
+                        android:maxLines="3"
+                        android:textSize="12sp"
+                        android:text="TextView" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#D9D9D9"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                android:padding="1dp"
+                
+                android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btn_cartera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="5"
+                android:layout_margin="5dp"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_button"
+                android:backgroundTint="#eef4fd"
+                android:padding="2dp"
+                android:drawableTint="#2196F3"
+                android:drawableLeft="@android:drawable/ic_menu_sort_by_size"
+                android:text="Cartera "
+                android:textColor="@color/Color1" />
+
+                <Button
+                    android:id="@+id/btnEnvioCartera"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="5"
+                    android:backgroundTint="#009688"
+
+                    android:drawableLeft="@android:drawable/sym_action_email"
+                    android:text="Envio cartera "
+                    android:textColor="@color/Blanco" />
+
+                <Button
+                android:id="@+id/btn_historialcliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="5"
+                android:layout_margin="5dp"
+
+                android:padding="2dp"
+                android:background="@drawable/bg_button"
+                android:backgroundTint="#eef4fd"
+                android:drawableTint="#2196F3"
+                android:drawableLeft="@android:drawable/ic_input_get"
+                android:text="Historial"
+                android:textColor="@color/Color1" />
+
+                <Button
+                    android:id="@+id/btn_historialrem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dp"
+                    android:layout_weight="5"
+                    android:background="@drawable/bg_button"
+                    android:backgroundTint="#eef4fd"
+                    android:drawableLeft="@android:drawable/ic_input_get"
+                    android:drawableTint="#2196F3"
+                    android:padding="2dp"
+                    android:text="Ordenes"
+                    android:textColor="@color/Color1" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:visibility="gone"
+                android:padding="1dp"
+                android:background="@color/GrisBorde"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtObs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="#98A3EE"
+                    android:padding="5dp"
+                    android:text="Observación"
+                    android:textAlignment="center"
+                    android:textColor="@color/Blanco"
+                    android:textStyle="normal" />
+
+                <EditText
+                    android:id="@+id/obscliente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/GrisBusqueda"
+                    android:padding="5dp"
+                    android:gravity="top"
+                    android:inputType="text|textMultiLine"
+                    android:textSize="13dp"
+                    android:hint="Escribe una observación..." />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:gravity="start"
+                android:textSize="12sp"
+                android:textColor="#2196F3"
+                android:lines="2"
+                android:layout_marginLeft="20dp"
+                android:text="Detalle"
+                android:textStyle="normal" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#2196F3"/>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                 
+                android:layout_margin="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_button_card"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        
+                        android:textColor="#CACACA"
+                        android:lines="2"
+
+                        android:text="Direccion"
+
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/txt_direccion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        
+                        android:textColor="@color/Negro"
+                        android:text="TextView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        
+                        android:textColor="#CACACA"
+                        android:text="Ciudad"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/txt_ciudad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        
+                        android:textColor="@color/Negro"
+                        android:text="TextView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        
+                        android:textColor="#CACACA"
+                        android:text="Barrio"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/txt_barrio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        
+                        android:textColor="@color/Negro"
+                        android:text="TextView" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        
+                        android:textColor="#CACACA"
+                        android:text="Canal"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/txt_canal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        
+                        android:textColor="@color/Negro"
+                        android:text="TextView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        
+                        android:textColor="#CACACA"
+                        android:text="SubCanal"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/txt_subcanal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        
+                        android:textColor="@color/Negro"
+                        android:text="TextView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txttipocliente"
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        
+                        android:textColor="#CACACA"
+                        android:text="Tipo cliente"
+
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tipocliente"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        
+                        android:textColor="@color/Negro"
+                        android:text="TextView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtperfilcliente"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        
+                        android:textColor="#CACACA"
+                        android:text="Perfil cliente"
+
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/perfilcliente"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        
+                        android:textColor="@color/Negro"
+                        android:text="TextView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:visibility="gone"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtzona"
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        
+                        android:textColor="#CACACA"
+                        android:text="Zona"
+
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/zona"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        
+                        android:textColor="@color/Negro"
+                        android:text="TextView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtruta"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        
+                        android:textColor="#CACACA"
+                        android:text="Ruta"
+
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/ruta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        
+                        android:textColor="@color/Negro"
+                        android:text="TextView" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtcategoria"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        
+                        android:textColor="#CACACA"
+                        android:text="Categoría"
+
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/categoria"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        
+                        android:textColor="@color/Negro"
+                        android:text="TextView" />
+                </LinearLayout>
+
+
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        
+                        android:textColor="#CACACA"
+                        android:text="Cupo Vendedor"
+
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/txt_cupovendedor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        
+                        android:textColor="@color/Negro"
+                        android:text="TextView" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        
+                        android:textColor="#CACACA"
+                        android:text="Cupo General"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/txt_cupogeneral"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        
+                        android:textColor="@color/Negro"
+                        android:text="TextView" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        
+                        android:textColor="#CACACA"
+                        android:text="% Sobre cupo"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/txt_cupopor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        
+                        android:textColor="@color/Negro"
+                        android:text="TextView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        
+                        android:textColor="#CACACA"
+                        android:text="Mora Vendedor"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/txt_moravendedor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        
+                        android:textColor="@color/Negro"
+                        android:text="TextView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        
+                        android:textColor="#CACACA"
+                        android:text="Mora General"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/txt_morageneral"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        
+                        android:textColor="@color/Negro"
+                        android:text="TextView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/txtview5600"
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        
+                        android:textColor="#CACACA"
+                        android:text="Cartera general"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/txt_carterageneral"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        
+                        android:textColor="@color/Negro"
+                        android:text="TextView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/txtview5600h"
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        
+                        android:textColor="#CACACA"
+                        android:text="Cartera vendedor"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/txt_carteravendedor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        
+                        android:textColor="@color/Negro"
+                        android:text="TextView" />
+                </LinearLayout>
+
+            </LinearLayout>
+            </ScrollView>
+
+            <Button
+                android:id="@+id/btn_pedido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_button_sinco"
+                android:drawableLeft="@android:drawable/ic_menu_myplaces"
+                android:text="Tomar pedido"
+                android:textColor="@color/Blanco" />
+            <Button
+
+                android:id="@+id/btnvolver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_button_rojo"
+
+                android:text="volver"
+                android:textColor="@color/Blanco" />
+        </LinearLayout>
+
+</FrameLayout>

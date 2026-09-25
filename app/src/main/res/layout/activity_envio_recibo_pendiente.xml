@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="?attr/actionBarSize">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.497">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:textColor="@color/Negro"
+                android:text="Envio de recibos pendientes"/>
+            <TextView
+                android:id="@+id/cantidadintent"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="end"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:layout_weight="3"
+                android:text="0"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/cantidadpen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="0"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:text="Enviando : "/>
+                <TextView
+                    android:id="@+id/cantidadenv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:text="0"/>
+
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/barrapendientes"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:background="@color/Blanco"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="8dp"
+            android:background="@color/GrisTextoFondo"/>
+        <Button
+            android:id="@+id/btn_reenviar"
+            android:layout_width="match_parent"
+            android:backgroundTint="#2196F3"
+            android:textColor="@color/Blanco"
+            android:layout_height="wrap_content"
+            android:text="Enviar"
+            />
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

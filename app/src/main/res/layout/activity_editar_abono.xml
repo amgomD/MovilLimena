@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+android:padding="5dp"
+
+    tools:context=".EditarAbono">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content"
+    >
+ <LinearLayout
+     android:padding="15dp"
+
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:background="@color/Blanco"
+     android:orientation="vertical"
+     >
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_marginBottom="15dp"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         >
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:text="Saldo con impuestos"
+             android:textColor="@color/Negro"/>
+         <TextView
+             android:id="@+id/Saldotxt"
+             android:layout_gravity="center"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Saldo"
+             android:textColor="#009688"
+             android:textSize="25dp"
+            />
+
+     </LinearLayout>
+
+     <View
+         android:layout_width="match_parent"
+         android:layout_height="2dp"
+
+         android:layout_margin="10dp"
+         android:background="@color/GrisBusqueda"
+         />
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal">
+
+
+
+             <FrameLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1">
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="$ Dcto Fin"/>
+                 <EditText
+                     android:id="@+id/dctofin"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:layout_marginTop="10dp"
+                     android:backgroundTint="#E91E63"
+                     android:ems="10"
+ android:text="0"
+                     android:hint="Valor"
+                     android:textColor="@color/colorAccent"
+                     android:inputType="number"
+                     android:numeric="decimal"
+                     android:textStyle="bold" />
+             </FrameLayout>
+
+         <FrameLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_weight="1">
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="$ Aprovechamiento."/>
+             <EditText
+                 android:id="@+id/Aprove"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:text="0"
+                 android:layout_marginTop="10dp"
+                 android:backgroundTint="#4CAF50"
+                 android:ems="10"
+
+                 android:hint="Valor"
+                 android:textColor="#4CAF50"
+                 android:inputType="number"
+                 android:numeric="decimal"
+                 android:textStyle="bold" />
+         </FrameLayout>
+     </LinearLayout>
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal">
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:layout_margin="2dp"
+             android:orientation="vertical"
+             >
+             <FrameLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1">
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="$ Dcto Conf"/>
+                 <EditText
+                     android:id="@+id/dctoconf"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:layout_marginTop="10dp"
+                     android:backgroundTint="#E91E63"
+                     android:ems="10"
+
+                     android:text="0"
+                     android:hint="Valor"
+                     android:textColor="@color/colorAccent"
+                     android:inputType="number"
+                     android:numeric="decimal"
+                     android:textStyle="bold" />
+
+             </FrameLayout>
+             <TextView
+                 android:layout_width="match_parent"
+                 android:background="#F3F3F3"
+                 android:padding="2dp"
+                 android:layout_height="wrap_content"
+                 android:textColor="@color/Negro"
+                 android:text="Sistema"/>
+             <TextView
+
+                 android:layout_width="match_parent"
+                 android:background="@color/Amarillocajas"
+                 android:padding="2dp"
+                 android:textAlignment="center"
+                 android:layout_height="wrap_content"
+                 android:textColor="@color/GrisLetra"
+                 android:text="$ Dcto conf"/>
+             <TextView
+                  android:id="@+id/dctoconfsis"
+                 android:layout_width="match_parent"
+                 android:padding="2dp"
+                 android:textAlignment="center"
+                 android:layout_height="wrap_content"
+                 android:textColor="@color/GrisLetra"
+                 android:text="0"/>
+         </LinearLayout>
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_margin="2dp"
+             android:layout_weight="1"
+             android:orientation="vertical"
+             >
+
+         <FrameLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_weight="1">
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="$ Dcto Prov"/>
+             <EditText
+                 android:id="@+id/dctoprov"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:layout_marginTop="10dp"
+                 android:backgroundTint="#E91E63"
+                 android:ems="10"
+                 android:text="0"
+                 android:hint="Valor"
+                 android:textColor="@color/colorAccent"
+                 android:inputType="numberDecimal"
+                 android:numeric="decimal"
+                 android:textStyle="bold" />
+         </FrameLayout>
+             <TextView
+                 android:layout_width="match_parent"
+                 android:background="#F3F3F3"
+                 android:layout_height="wrap_content"
+                 android:padding="2dp"
+                 android:textColor="@color/Negro"
+                 android:text=""/>
+             <TextView
+
+                 android:layout_width="match_parent"
+                 android:background="@color/Amarillocajas"
+                 android:padding="2dp"
+                 android:textAlignment="center"
+                 android:layout_height="wrap_content"
+                 android:textColor="@color/GrisLetra"
+                 android:text="$ Dcto Prov"/>
+             <TextView
+                 android:id="@+id/dctoprovgsis"
+                 android:layout_width="match_parent"
+                 android:padding="2dp"
+                 android:textAlignment="center"
+                 android:layout_height="wrap_content"
+                 android:textColor="@color/GrisLetra"
+                 android:text="0"/>
+         </LinearLayout>
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_margin="2dp"
+             android:layout_weight="1"
+             android:orientation="vertical"
+             >
+         <FrameLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_weight="1">
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="$ Dcto No Oto."/>
+             <EditText
+                 android:id="@+id/DctoNoOto"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:layout_marginTop="10dp"
+                 android:backgroundTint="#E91E63"
+                 android:ems="10"
+                 android:text="0"
+                 android:hint="Valor"
+                 android:textColor="@color/colorAccent"
+                 android:inputType="number|numberDecimal"
+                 android:numeric="decimal"
+                 android:textStyle="bold" />
+         </FrameLayout>
+             <TextView
+                 android:layout_width="match_parent"
+                 android:background="#F3F3F3"
+                 android:layout_height="wrap_content"
+                 android:padding="2dp"
+                 android:textColor="@color/Negro"
+                 android:text=""/>
+             <TextView
+
+                 android:layout_width="match_parent"
+                 android:background="@color/Amarillocajas"
+
+                 android:padding="2dp"
+                 android:textAlignment="center"
+                 android:layout_height="wrap_content"
+                 android:textColor="@color/GrisLetra"
+                 android:text="$ Dcto No Oto."/>
+             <TextView
+                 android:id="@+id/dctonotogsis"
+                 android:layout_width="match_parent"
+                 android:padding="2dp"
+                 android:textAlignment="center"
+                 android:layout_height="wrap_content"
+                 android:textColor="@color/GrisLetra"
+                 android:text="0"/>
+         </LinearLayout>
+     </LinearLayout>
+     <View
+         android:layout_width="match_parent"
+         android:layout_height="2dp"
+
+         android:layout_margin="10dp"
+         android:background="@color/GrisBusqueda"
+         />
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical">
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_weight="2"
+             android:orientation="horizontal">
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_weight="1"
+
+                 android:layout_height="wrap_content"
+                 android:orientation="vertical">
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_margin="1dp"
+                     android:gravity="center"
+                     android:layout_weight="1"
+                     android:background="@color/Blanco"
+                     android:lines="1"
+                     android:text="Neto a Pagar"
+                     android:textColor="@color/Negro" />
+                 <TextView
+                     android:id="@+id/pago"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_margin="1dp"
+                     android:layout_weight="1"
+                     android:textSize="17dp"
+                     android:gravity="center"
+                     android:background="@color/Blanco"
+                     android:lines="1"
+                     android:padding="5dp"
+                     android:text="1500"
+                     android:textColor="#E91E63" />
+
+             </LinearLayout>
+             <LinearLayout
+                 android:layout_width="match_parent"
+                android:id="@+id/saldoNota"
+                 android:layout_weight="1"
+                 android:layout_height="wrap_content"
+                 android:orientation="vertical">
+                 <TextView
+                     android:id="@+id/numNota"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_margin="1dp"
+                     android:layout_weight="1"
+                     android:background="@color/Blanco"
+                     android:lines="1"
+                     android:gravity="center"
+                     android:text="Nota"
+                     android:textColor="#009688" />
+
+
+
+                 <TextView
+                     android:id="@+id/pagonota"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_margin="1dp"
+                     android:layout_weight="1"
+                     android:textSize="17dp"
+                     android:background="@color/Blanco"
+                     android:lines="1"
+                     android:padding="5dp"
+                     android:gravity="center"
+                     android:text="1500"
+                     android:textColor="#E91E63" />
+
+             </LinearLayout>
+
+
+         </LinearLayout>
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_weight="3"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             >
+             <Button
+                 android:id="@+id/Pagarsinnota"
+                 android:layout_width="match_parent"
+                 android:layout_weight="1"
+                 android:layout_height="100px" android:text="Pagar Sin Nota"
+                 android:background="#3F51B5"
+                 android:textColor="@color/Blanco"/>
+             <Button
+                 android:id="@+id/Pagar"
+                 android:layout_width="match_parent"
+                 android:layout_height="100px"
+                 android:layout_weight="1"
+                 android:background="@color/Color1"
+                 android:layout_marginBottom="10dp"
+                 android:layout_marginLeft="10dp"
+                 android:text="Pagar"
+                 android:textColor="@color/Blanco" />
+
+
+         </LinearLayout>
+
+
+     </LinearLayout>
+     <View
+         android:layout_width="match_parent"
+         android:layout_height="2dp"
+
+         android:layout_margin="10dp"
+         android:background="@color/GrisBusqueda"
+         />
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_marginTop="10dp"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal">
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_weight="2"
+             android:orientation="vertical">
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_margin="1dp"
+                 android:layout_weight="2"
+                 android:background="@color/Blanco"
+                 android:lines="1"
+                 android:layout_gravity="center"
+                 android:text="Abono"
+                 android:textColor="@color/Negro" />
+
+
+             <FrameLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="45dp"
+                 android:layout_weight="1">
+
+                 <EditText
+                     android:id="@+id/abono"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:backgroundTint="#4CAF50"
+                     android:ems="10"
+
+                     android:hint="Valor"
+                     android:textColor="#4CAF50"
+                     android:inputType="number"
+                     android:numeric="decimal"
+                     android:textStyle="bold" />
+             </FrameLayout>
+
+         </LinearLayout>
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_weight="1"
+             android:layout_height="wrap_content"
+             android:orientation="vertical"
+             >
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_margin="1dp"
+                 android:layout_weight="1"
+                 android:background="@color/Blanco"
+                 android:lines="1"
+                 android:layout_gravity="center"
+                 android:text="Observación"
+                 android:textColor="@color/Negro" />
+             <FrameLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="45dp"
+                 android:layout_weight="1">
+
+                 <EditText
+                     android:id="@+id/Observacion"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:backgroundTint="#4CAF50"
+                     android:ems="10"
+                     android:hint="Observacion"
+                     android:inputType="text"
+                     android:textStyle="normal" />
+
+             </FrameLayout>
+
+
+         </LinearLayout>
+
+     </LinearLayout>
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginBottom="10dp"
+         android:background="@color/GrisBusqueda"
+         android:orientation="vertical">
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_margin="1dp"
+             android:layout_weight="2"
+             android:background="@color/Blanco"
+             android:lines="1"
+             android:layout_gravity="center"
+             android:text="Justificación"
+             android:textColor="@color/Negro" />
+
+         <Spinner
+
+             android:id="@+id/justificacion"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"/>
+
+
+     </LinearLayout>
+     <Button
+         android:id="@+id/Abonar"
+         android:layout_width="match_parent"
+         android:layout_height="100px"
+         android:layout_weight="1"
+
+         android:background="#4CAF50"
+         android:text="Abonar"
+         android:textColor="@color/Blanco" />
+     <View
+         android:layout_width="match_parent"
+         android:layout_height="2dp"
+
+         android:layout_margin="10dp"
+         android:background="@color/GrisBusqueda"
+         />
+     <Button
+         android:id="@+id/Cancelar"
+         android:layout_width="match_parent"
+         android:layout_height="100px"
+         android:text="Borrar pago"
+         android:layout_weight="1"
+         android:layout_gravity="end"
+         android:layout_marginTop="15dp"
+         android:background="#F44336"
+         android:textColor="@color/Blanco"/>
+
+ </LinearLayout>
+
+</ScrollView>
+
+
+</FrameLayout>

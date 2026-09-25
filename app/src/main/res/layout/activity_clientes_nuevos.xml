@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClientesNuevos">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_crearclientenuevo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#E91E63"
+            android:drawableLeft="@android:drawable/ic_menu_add"
+            android:text="Crear Cliente"
+            android:textColor="@color/Blanco" />
+
+        <Button
+            android:id="@+id/btn_EnviarClientes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#8BC34A"
+            android:drawableLeft="@android:drawable/ic_menu_add"
+            android:text="ENVIAR CLIENTES"
+            android:textColor="@color/Blanco" />
+
+        <ListView
+            android:id="@+id/listview_clientesnuevos"
+            android:layout_width="395dp"
+            android:layout_height="715dp">
+
+        </ListView>
+    </LinearLayout>
+
+</FrameLayout>

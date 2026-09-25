@@ -1,0 +1,51 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppTheme.CustomTheme" >
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+    <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">#8BC34A</item>
+        <item name="android:textColor">#DDDCDC</item>
+        <item name="android:textColorPrimary">#FFFFFFFF</item>
+     </style>
+    <style name="AppTheme.Panel" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="OverlayCheckbox">
+        <item name="android:textColorPrimaryDisableOnly">#E91E63</item>
+    </style>
+    <style name="SCBSwitch" parent="Theme.AppCompat">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">#0A9510</item>
+
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">#0A9510</item>
+
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">#0A9510</item>
+    </style>
+     <style name="MyDialogThemeRojo" parent="Theme.AppCompat.Light.Dialog.Alert">
+         <item name="android:background">#E91E63</item>
+         <item name="android:textColor">#DDDCDC</item>
+         <item name="android:textColorPrimary">#FFFFFFFF</item>
+     </style>
+    <style name="MyDialogsinconRojo" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:background">#FF0000</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+    </style>
+    <style name="PopupAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+ </resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="PurpleTheme" parent="AppTheme">
+        <item name="android:colorAccent">#8654e2</item>
+    </style>
+    <style name="PopupAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+    <style name="btntema" parent="AppTheme.NoActionBar">
+        <item name="android:colorPrimary">#E91E63</item>
+        <item name="android:colorAccent">#E91E63</item>
+        <item name="android:colorPrimaryDark">#E91E63</item>
+    </style>
+</resources>

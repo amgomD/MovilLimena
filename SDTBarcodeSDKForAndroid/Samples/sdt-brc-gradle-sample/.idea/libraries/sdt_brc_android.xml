@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="sdt-brc-android">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/src/main/libs/sdt-brc-android.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dp"
+    android:background="#F5F7FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="@android:color/white"
+        android:elevation="2dp">
+
+        <!-- ================================================= -->
+        <!-- CABECERA: PEDIDO + COMPARTIR -->
+        <!-- ================================================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txt_pedido"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Ped"
+                android:textColor="#1E3199"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <ImageButton
+                android:id="@+id/compartir"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/bg_button"
+                android:contentDescription="Compartir pedido"
+                android:padding="8dp"
+                android:src="@android:drawable/ic_menu_share"
+                android:tint="#1E3199" />
+
+        </LinearLayout>
+
+
+        <!-- ================================================= -->
+        <!-- CLIENTE / NEGOCIO / BODEGA -->
+        <!-- ================================================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="2dp"
+            android:paddingBottom="4dp">
+
+            <TextView
+                android:id="@+id/txt_nombrecliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cliente"
+                android:textColor="#263238"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/txt_nombrenegocio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="Negocio"
+                android:textColor="#546E7A"
+                android:textSize="14sp"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/txt_bodega"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="Bodega"
+                android:textColor="#9C27B0"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+        </LinearLayout>
+
+
+        <!-- ================================================= -->
+        <!-- BOTONES DE ACCIÓN -->
+        <!-- ================================================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <Button
+                android:id="@+id/button3Env"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="3dp"
+                android:backgroundTint="#43A047"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="Enviar"
+                android:textAllCaps="false"
+                android:textColor="@color/Blanco"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button4ver"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:backgroundTint="#E3F2FD"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="Ver"
+                android:textAllCaps="false"
+                android:textColor="#1565C0"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnEnvPen"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:backgroundTint="@color/Color1"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Envío Alt"
+                android:textAllCaps="false"
+                android:textColor="@color/Blanco"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btnBorrar"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="3dp"
+                android:background="@drawable/bg_button_danger"
+                android:contentDescription="Eliminar pedido"
+                android:padding="8dp"
+                android:src="@android:drawable/ic_menu_delete"
+                android:tint="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnwhatsap"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:layout_marginStart="3dp"
+                android:backgroundTint="#4CAF50"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:drawableLeft="@drawable/wasalogo"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Envío"
+                android:textAllCaps="false"
+                android:textColor="@color/Blanco"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+        <!-- ================================================= -->
+        <!-- VALOR DEL PEDIDO -->
+        <!-- ================================================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="#F1F6FC"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <TextView
+                android:id="@+id/text20"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Valor Pedido:"
+                android:textColor="#607D8B"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_valorpedido"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="0.00"
+                android:textColor="#1565C0"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <!-- ================================================= -->
+        <!-- ESTADOS -->
+        <!-- ================================================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <!-- ========================== -->
+            <!-- ENVIADO -->
+            <!-- ========================== -->
+
+            <LinearLayout
+                android:id="@+id/contentenvalt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <CheckBox
+                    android:id="@+id/checkBox_envalt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:buttonTint="#43A047"
+                    android:clickable="false"
+                    android:text="Enviado"
+                    android:textColor="#455A64"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/pedenviado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:text="N"
+                    android:textColor="#607D8B"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="5dp">
+
+                    <TextView
+                        android:id="@+id/txt_porpedidoenvalt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0%"
+                        android:textColor="#9C27B0"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:maxLines="1" />
+
+                    <TextView
+                        android:id="@+id/txt_valorpedidoenvalt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0.00"
+                        android:textColor="#607D8B"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:maxLines="1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!-- ========================== -->
+            <!-- GENERADO -->
+            <!-- ========================== -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <CheckBox
+                    android:id="@+id/checkBox_enviado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:buttonTint="#1976D2"
+                    android:clickable="false"
+                    android:text="Generado"
+                    android:textColor="#455A64"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="5dp">
+
+                    <TextView
+                        android:id="@+id/txt_porpedidoenv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0%"
+                        android:textColor="#9C27B0"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:maxLines="1" />
+
+                    <TextView
+                        android:id="@+id/txt_valorpedidoenv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0.00"
+                        android:textColor="#607D8B"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:maxLines="1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

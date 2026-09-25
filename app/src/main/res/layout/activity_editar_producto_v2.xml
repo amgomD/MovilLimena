@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditarProductoV2">
+
+
+
+
+
+
+    <LinearLayout
+        android:background="#FAFAFA"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:paddingTop="10dp"
+            android:paddingLeft="5dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+
+            <ImageView
+                android:id="@+id/home"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+
+                android:src="@drawable/ic_home_black_24dp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/bg_button_sinco"
+                ></ImageView>
+        <TextView
+            android:id="@+id/pedidonum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:layout_weight="1"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/Negro"
+            android:text="Orden#: "/>
+            <Button
+                android:id="@+id/btnNuevoPedido"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+        android:drawableStart="@android:drawable/ic_menu_add"
+                android:text="Nuevo pedido"
+                android:drawableTint="@color/Color1"
+                android:textAllCaps="false"
+                android:textStyle="normal"
+                android:textColor="@color/Color1"
+                android:background="@drawable/bg_button"
+                android:layout_marginEnd="8dp"/>
+
+
+        </LinearLayout>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:padding="4dp"
+    android:orientation="horizontal">
+    <Button
+        android:id="@+id/Infocliente"
+        android:layout_width="32dp"
+        android:textAlignment="center"
+        android:background="@drawable/bg_button_sinco"
+        android:gravity="center"
+        android:layout_height="25dp"
+
+android:drawableStart="@android:drawable/ic_menu_info_details"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:layout_marginEnd="10dp"
+        android:textAllCaps="false"
+        android:textColor="@color/Blanco"
+/>
+    <Button
+        android:id="@+id/descuentos"
+        android:layout_width="wrap_content"
+        android:textAlignment="center"
+        android:background="@drawable/bg_button_sinco"
+        android:gravity="center"
+        android:layout_height="25dp"
+
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/Blanco"
+        android:text="SALE ✔" />
+
+    <Button
+        android:id="@+id/Filtro"
+        android:layout_width="wrap_content"
+        android:textAlignment="center"
+        android:background="@drawable/bg_button_card"
+        android:gravity="center"
+        android:layout_height="25dp"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/Negro"
+        android:textAllCaps="false"
+        android:text="Todos" />
+    <TextView
+
+        android:id="@+id/bodeganom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="4dp"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:text="Nombre bodega"
+        android:textColor="@color/GrisLetra" />
+    <ImageView
+        android:id="@+id/historico"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="10dp"
+
+        android:scaleType="fitCenter"
+        app:srcCompat="@mipmap/relojhis" />
+    <ImageView
+        android:id="@+id/Categorias"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+
+        android:scaleType="fitCenter"
+        app:srcCompat="@mipmap/filtericon" />
+
+</LinearLayout>
+
+        <SearchView
+            android:id="@+id/search_nombre"
+            android:layout_margin="7dp"
+            android:background="@drawable/bg_button"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+
+            android:layout_weight="1">
+
+        </SearchView>
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ToggleButton
+                    android:id="@+id/toggleButton"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:lines="2"
+
+                    android:visibility="gone"
+                    android:text="ToggleButton"
+                    android:textColor="@color/GrisLetra"
+                    android:textOff="Teclado numerico Off"
+                    android:textOn="Teclado Numerico ON"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+
+
+            <SearchView
+                android:id="@+id/search_codigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:inputType="number">
+
+            </SearchView>
+        </LinearLayout>
+
+        <FrameLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+
+            <!-- CONTENIDO PRINCIPAL -->
+            <LinearLayout
+
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_margin="5dp"
+                    android:id="@+id/tipocredito"
+                    android:padding="5dp"
+                    android:textColor="#025950"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="X Credito"
+                    android:background="@drawable/bg_button_creditomalo"
+                    />
+
+            <LinearLayout
+                android:id="@+id/layoutPrincipal"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <!-- MENU FLOTANTE -->
+                <LinearLayout
+                    android:id="@+id/menuCategorias"
+                    android:layout_width="260dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="#FFFFFF"
+                    android:elevation="10dp"
+                   >
+
+                    <ListView
+                        android:id="@+id/listview_grupos"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </LinearLayout>
+
+                <GridView
+                    android:id="@+id/listview_productos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:numColumns="auto_fit"
+                    android:columnWidth="300dp"
+                    android:layout_weight="1"
+                    android:verticalSpacing="8dp"
+                    android:horizontalSpacing="8dp"
+
+                    android:stretchMode="columnWidth"/>
+            </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+
+
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:background="@drawable/bg_button"
+            android:elevation="8dp">
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="310dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:elevation="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <!-- VALOR TOTAL -->
+
+                    <!-- TOTAL UNIDADES -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtValorTotal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:paddingBottom="5dp"
+                        android:text="Valor pedido: $0"
+                        android:textColor="@color/Negro"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                        <TextView
+
+                            android:id="@+id/txtValorneto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+android:visibility="gone"
+                            android:paddingBottom="5dp"
+                            android:text="Valor pedido: $0"
+                            android:textColor="@color/Negro"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/creditobueno"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:paddingBottom="5dp"
+                            android:text="Valor credito bueno: $0"
+                            android:textColor="#009688"
+
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/creditomalo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorAccent"
+                            android:paddingBottom="5dp"
+                            android:text="Valor credito malo: $0"
+
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/txtTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total items: 0"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/Negro"
+                        android:paddingBottom="4dp"/>
+
+                </LinearLayout>
+
+
+
+
+            <!-- BOTONES -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <!-- VER PEDIDO -->
+                <Button
+                    android:id="@+id/btnVerPedido"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="4"
+                    android:text="Ver Pedido"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/bg_button_sinco"
+                    android:layout_marginEnd="8dp"/>
+                <!-- VER PEDIDO -->
+                <Button
+                    android:id="@+id/btnEnviopedido"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="3"
+                    android:text="Enviar"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/bg_button_envio"
+                    android:layout_marginEnd="8dp"/>
+                <!-- BORRAR -->
+                <ImageButton
+                    android:id="@+id/btnBorrar"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="8dp"
+                    android:src="@android:drawable/ic_menu_delete"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/bg_button_danger"/>
+
+                <ImageButton
+                    android:id="@+id/compartir"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+
+                    android:layout_marginEnd="8dp"
+                    android:src="@android:drawable/ic_menu_share"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/bg_button_sinco"/>
+
+
+
+
+            </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Capa de carga -->
+    <FrameLayout
+        android:id="@+id/layoutCarga"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressCarga"
+            android:indeterminateTint="#2196F3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:indeterminate="true" />
+
+    </FrameLayout>
+
+
+
+
+</FrameLayout>
+
+

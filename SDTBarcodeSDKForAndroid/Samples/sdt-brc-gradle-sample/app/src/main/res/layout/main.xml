@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    <TextView  
+        android:id="@+id/resultsLabel"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:text="Results:" />
+    <LinearLayout
+        android:id="@+id/resultsValues"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:src="@drawable/icon"  
+        android:id="@+id/resultsImage"
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent" 
+        android:text=""
+        android:layout_weight="1" />
+    <Button
+        android:text="SCAN"
+        android:id="@+id/readBarcode"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <Button 
+        android:text="SCAN ACTIVITY"
+        android:id="@+id/readBarcodeByScanActivity"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

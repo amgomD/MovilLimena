@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="3dp"
+    tools:context=".Principal">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_Sincronizar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="5"
+                    android:backgroundTint="#ef9a9a"
+                    android:drawableLeft="@android:drawable/ic_menu_rotate"
+                    android:text="Sincronizar "
+                    android:textColor="@color/Blanco" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_clientespedido"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:backgroundTint="#98A3EE"
+                    android:drawableLeft="@android:drawable/ic_menu_myplaces"
+                    android:text="Ruta"
+                    android:textColor="@color/Blanco" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_weight="5"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_extraruta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:backgroundTint="#DFD153"
+                    android:drawableLeft="@android:drawable/ic_menu_myplaces"
+                    android:text="Extraruta"
+                    android:textColor="@color/Blanco" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_enviarpedidos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:backgroundTint="#8BC34A"
+                    android:drawableLeft="@android:drawable/ic_menu_upload"
+                    android:text="Resumen Dia"
+                    android:textColor="@color/Blanco" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_crearcliente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:backgroundTint="#BD8093"
+                    android:drawableLeft="@android:drawable/ic_menu_add"
+                    android:text="Crear/Consultar Clientes Nuevos"
+                    android:textColor="@color/Blanco" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_informediario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:backgroundTint="#ef9a9a"
+                    android:drawableLeft="@android:drawable/checkbox_on_background"
+                    android:text="Informe Diario"
+                    android:textColor="@color/Blanco" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnHistorico"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:backgroundTint="#03A9F4"
+                    android:drawableLeft="@android:drawable/ic_menu_my_calendar"
+                    android:text="Historico ventas"
+                    android:textColor="@color/Blanco" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_descuentosactivos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:backgroundTint="#00BCD4"
+                    android:drawableLeft="@android:drawable/checkbox_on_background"
+                    android:text="Descuentos Activos"
+                    android:textColor="@color/Blanco" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btn_enviarrecibos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#03A9F4"
+                    android:drawableLeft="@android:drawable/ic_menu_upload"
+                    android:enabled="true"
+                    android:textSize="35px"
+                    android:text="Enviar Recibos de caja"
+                    android:textColor="@color/Blanco"
+                    android:visibility="visible"
+                    tools:visibility="visible" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btnconsginar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#FF9800"
+                    android:drawableLeft="@android:drawable/ic_menu_agenda"
+                    android:enabled="true"
+                    android:textSize="35px"
+                    android:text="Consignar efectivo"
+                    android:textColor="@color/Blanco"
+                    android:visibility="visible"
+                    tools:visibility="visible" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_reset"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:backgroundTint="#9E9E9E"
+                    android:text="Configuraciones"
+                    android:textColor="@color/Blanco" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:srcCompat="@mipmap/logomantis" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:gravity="center"
+
+                android:orientation="horizontal">
+
+
+
+                <Button
+                    android:id="@+id/btn_recalcularbon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#673AB7"
+                    android:drawableLeft="@android:drawable/ic_menu_upload"
+                    android:enabled="true"
+                    android:text="Recalcular bon"
+                    android:textColor="@color/Blanco"
+                    android:textSize="30px"
+                    android:visibility="visible"
+                    tools:visibility="visible" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_versionapp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Version 2025.02.28.1"
+                android:textColor="#FF5722" />
+
+            <TextView
+                android:id="@+id/txt_ultsin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Ultima sincronizacion" />
+
+            <TextView
+                android:id="@+id/txt_fecser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Fecha servidor" />
+
+            <TextView
+                android:id="@+id/txt_horenv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Hora envio" />
+
+            <TextView
+                android:id="@+id/txt_pedmin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Pedido minimo" />
+
+            <Button
+                android:id="@+id/btn_soporte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:backgroundTint="#FFFFFF"
+                android:drawableLeft="@android:drawable/ic_menu_upload"
+                android:text="Soporte"
+
+                android:textColor="@color/GrisBorde" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>

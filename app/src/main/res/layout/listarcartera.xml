@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="6dp"
+    android:paddingEnd="6dp"
+    android:paddingTop="3dp"
+
+    android:paddingBottom="3dp">
+
+    <!-- CONTENEDOR TIPO CARD -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_item_cartera"
+        android:padding="8dp">
+
+        <!-- ============================= -->
+        <!-- FILA 1                        -->
+        <!-- ============================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- FACTURA -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Factura "
+                    android:textColor="@color/GrisLetra"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/txt_factura"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="123456"
+                    android:textColor="@color/Negro"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <!-- VALOR -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Valor "
+                    android:textColor="@color/GrisLetra"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/txt_valor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$350.000"
+                    android:textColor="@color/Negro"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <!-- SALDO -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="end">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Saldo "
+                    android:textColor="@color/GrisLetra"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/txt_saldo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$250.000"
+                    android:textColor="#388E3C"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- ============================= -->
+        <!-- SEPARADOR                    -->
+        <!-- ============================= -->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/GrisBorde" />
+
+
+        <!-- ============================= -->
+        <!-- FILA 2                        -->
+        <!-- ============================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- FECHA -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fecha "
+                    android:textColor="@color/GrisLetra"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/txt_fecha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15/09/26"
+                    android:textColor="@color/Negro"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+
+            <!-- VENCIMIENTO -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vence "
+                    android:textColor="@color/GrisLetra"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/txt_fechavence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15/10/26"
+                    android:textColor="@color/Negro"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+
+            <!-- PLAZO -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Plazo "
+                    android:textColor="@color/GrisLetra"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/txt_plazo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30d"
+                    android:textColor="@color/Negro"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+
+            <!-- MORA -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:orientation="horizontal"
+                android:gravity="end">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mora "
+                    android:textColor="#E57373"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/txt_mora"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5d"
+                    android:textColor="#E53935"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- ============================= -->
+        <!-- ABONO                         -->
+        <!-- ============================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Abono "
+                android:textColor="@color/GrisLetra"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/txt_abono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$100.000"
+                android:textColor="#1976D2"
+                android:layout_marginEnd="20dp"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Abono "
+                android:visibility="gone"
+                android:textColor="@color/GrisLetra"
+                android:textSize="10sp" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/txt_abono2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$100.000"
+                android:textColor="#E91E63"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

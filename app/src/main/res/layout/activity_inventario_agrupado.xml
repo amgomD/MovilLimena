@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Blanco"
+    tools:context=".importarpedido">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/grupo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Grupo"
+                android:textAlignment="center"
+                android:textColor="@color/Blanco"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:background="#2D6C95"
+                android:textSize="20dp"
+                />
+
+
+   <ListView
+       android:id="@+id/lista"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"></ListView>
+
+
+        </LinearLayout>
+        <View
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/GrisBorde"
+            />
+
+    </LinearLayout>
+
+
+
+
+
+</FrameLayout>

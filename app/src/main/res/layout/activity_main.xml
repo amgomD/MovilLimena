@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="100dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/imageView2"
+    android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                app:srcCompat="@mipmap/logomantis2" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/Negro"
+                android:gravity="center_horizontal"
+                android:text="Iniciar sesion"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/TxtEmpresa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:hint="Empresa"
+                android:inputType="textPersonName"
+                android:selectAllOnFocus="false"
+                android:singleLine="false" />
+
+            <EditText
+                android:id="@+id/TxtUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:hint="Usuario"
+                android:inputType="textPersonName"
+                android:selectAllOnFocus="false" />
+
+            <EditText
+                android:id="@+id/TxtClave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:hint="Clave"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/btn_Ingresar"
+                android:layout_marginTop="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_button_sinco"
+                android:textColor="@color/Blanco"
+                android:text="Ingresar" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="133dp"
+                android:layout_weight="150" />
+
+            <Button
+                android:id="@+id/btn_Reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/GrisBorde"
+                android:text="Reset" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

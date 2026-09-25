@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="fill"
+    android:minHeight="100dp"
+    android:minWidth="100dp"
+    android:orientation="vertical" >
+    <TextView android:text="This Layer demonstrate the possibility to attach overlay to SD-TOOLKIT Barcode SDK Scanner Dialog. The layer is defined in layout/camera_overlay.xml. See SDTBarcodeSampleActivity.showCameraDialog() method for details." 
+                android:id="@+id/textView1" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon" />
+</LinearLayout>

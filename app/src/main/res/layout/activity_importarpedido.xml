@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".importarpedido">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pedidos importados"
+        android:textAlignment="center"
+        android:textColor="@color/Negro"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cliente: "
+        android:textStyle="bold"
+        android:textSize="15dp"
+        />
+    <TextView
+        android:id="@+id/clinom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cliente"
+        android:textSize="12dp"
+        />
+</LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Plazo: "
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    />
+                <TextView
+                    android:id="@+id/plazo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="12dp"
+                    />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bodega: "
+                android:textStyle="bold"
+                android:textSize="15dp"
+                />
+            <TextView
+                android:id="@+id/bodega"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="bodega"
+                android:textSize="12dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vendedor: "
+                android:textStyle="bold"
+                android:textSize="15dp"
+                />
+            <TextView
+                android:id="@+id/Vendedor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vendedor"
+                android:textSize="12dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+<View
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@color/GrisBorde"
+    />
+    <ListView
+        android:id="@+id/listview_importados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:layout_weight="1"
+        android:focusable="false"
+        android:descendantFocusability="beforeDescendants" />
+
+</LinearLayout>
+
+
+
+</FrameLayout>

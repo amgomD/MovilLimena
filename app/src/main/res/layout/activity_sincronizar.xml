@@ -1,0 +1,2669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Sincronizar">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="v2"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_Sincronizar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@drawable/bg_button_sinco"
+
+                android:drawableLeft="@android:drawable/ic_menu_rotate"
+                android:text="Sincronizar "
+                android:textColor="@color/Blanco" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:orientation="horizontal"
+            android:padding="1dp">
+
+            <TextView
+                android:id="@+id/txt_Clientes2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@color/Blanco"
+                android:paddingLeft="1dp"
+                android:paddingTop="5dp"
+                android:paddingRight="1dp"
+                android:paddingBottom="5dp"
+                android:text="Tabla"
+                android:textColor="@color/Color1"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_Clientes3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@color/Blanco"
+                android:paddingLeft="1dp"
+                android:paddingTop="5dp"
+                android:paddingRight="1dp"
+                android:paddingBottom="5dp"
+                android:text="Progreso"
+                android:textColor="@color/Color1"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_CntClientes2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/Blanco"
+                    android:paddingLeft="1dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="1dp"
+                    android:paddingBottom="5dp"
+                    android:text="Total"
+                    android:textColor="@color/Color1"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_OkClientes2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/Blanco"
+                    android:paddingLeft="1dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="1dp"
+                    android:paddingBottom="5dp"
+                    android:text="Validos"
+                    android:textColor="@color/Color1"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_ErrClientes2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/Blanco"
+                    android:paddingLeft="1dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="1dp"
+                    android:paddingBottom="5dp"
+                    android:text="Errores"
+                    android:textColor="@color/Color1"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/ScrollViewSv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:padding="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:orientation="vertical"
+                android:padding="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="1dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                       android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_BonificadosProd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text="Bonificados Prod"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_BonificadosProd"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_CntBonificadosProd"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:lines="1"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_OkBonificadosProd"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textSize="10dp"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_ErrBonificadosProd"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_Descuentos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text="Descuentos V2"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_Descuentos"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_CntDescuentos"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:lines="1"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_OkDescuentos"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:textSize="10dp"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_ErrDescuentos"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_ClientesDcto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text="Cliente Dcto"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_ClientesDcto"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+
+                            android:layout_height="50px"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_CntClientesDcto"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:lines="1"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_OkClientesDcto"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_ErrClientesDcto"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_Clientes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:padding="1dp"
+                            android:text="Clientes"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/prBar_Clientes"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:padding="1dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayaut"
+                            android:orientation="horizontal"
+                            android:padding="1dp">
+
+                            <TextView
+                                android:id="@+id/txt_CntClientes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:padding="1dp"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_OkClientes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:padding="1dp"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_ErrClientes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:layout_weight="1"
+                                android:padding="1dp"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_Proveedores"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:padding="1dp"
+                            android:text="Proveedores"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/prBar_Proveedores"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:padding="1dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayaut"
+                            android:orientation="horizontal"
+                            android:padding="1dp">
+
+                            <TextView
+                                android:id="@+id/txt_CntProveedores"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:padding="1dp"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_OkProveedores"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:padding="1dp"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_ErrProveedores"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:layout_weight="1"
+                                android:padding="1dp"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_ctaProveedores"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:padding="1dp"
+                            android:text="CTA Proveedores"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/prBar_ctaProveedores"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:padding="1dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayaut"
+                            android:orientation="horizontal"
+                            android:padding="1dp">
+
+                            <TextView
+                                android:id="@+id/txt_CntctaProveedores"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:padding="1dp"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_OkctaProveedores"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:padding="1dp"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_ErrctaProveedores"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:layout_weight="1"
+                                android:padding="1dp"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_MovParEsc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text="Dcto Escala"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_MovParEsc"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_CntMovParEsc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:lines="1"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_OkMovParEsc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_ErrMovParEsc"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_Ciudades"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:padding="1dp"
+                            android:text="Ciudades"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_Ciudades"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:padding="1dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:padding="1dp"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_CntCiudades"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:textSize="10dp"
+                                android:padding="1dp"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_OkCiudades"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:textSize="10dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:padding="1dp"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_ErrCiudades"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:padding="1dp"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_bodegas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:padding="1dp"
+                            android:text="Bodegas"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_Bodegas"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:padding="1dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:padding="1dp"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_CntBodegas"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:textSize="10dp"
+                                android:padding="1dp"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_oKBodegas"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:textSize="10dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:padding="1dp"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_ErrBodegas"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:padding="1dp"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_Barrios"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text="Barrios"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_Barrios"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_CntBarrios"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:textSize="10dp"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_OkBarrios"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:textSize="10dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_ErrBarrios"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_CalseXPerf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text="ClaseXPerf"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_ClaseXPerf"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_CntClaseXPerf"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:lines="1"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_OkClaseXPerf"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="10dp"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_ErrClaseXPerf"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_Cartera"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text="Cartera"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_Cartera"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_CntCartera"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:textSize="10dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_OkCartera"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:textSize="10dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_ErrCartera"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_Causales"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text="Causales"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_Causal"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_CntCausal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:textSize="10dp"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_OkCausal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_ErrCausal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_SubArticulos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text="Articulos"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_Articulos"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_CntArticulos"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:textSize="10dp"
+
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_OkArticulos"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:textSize="10dp"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_ErrArticulos"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txtExistencia"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text="Existencias"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_Existencias"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_CntExistencia"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:lines="1"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_OkExistencia"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_ErrExistencia"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_Grupo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text="Grupo"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_Grupo"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_CntGrupo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:lines="1"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_OkGrupo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_ErrGrupo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_SubGrupo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text="SubGrupo"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_SubGrupo"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_CntSubGrupo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:textSize="10dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_OkSubGrupo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_ErrSubGrupo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_Familia"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text="Familia"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_Familia"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_CntFamilia"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:textSize="10dp"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_OkFamilia"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_ErrFamilia"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_MovparbonProdBon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text="Bonificados 1"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_MovparbonProdBon"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_CntMovparbonProdBon"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:textSize="10dp"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_OkMovparbonProdBon"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:textSize="10dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_ErrMovparbonProdBon"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_Movparbonbonificados"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text="Bonificados 2"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_Movparbonbonificados"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_CntMovparbonbonificados"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:textSize="10dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_OkMovparbonbonificados"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_ErrMovparbonbonificados"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_historial"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text="Historial"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_historialnot"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_Cnthistorialnot"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:lines="1"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_Okhistorialnot"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:textSize="10dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_Errhistorialnot"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_ConceptosNotas"
+                            android:layout_width="match_parent"
+                            android:layout_height="7dp"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text="Conceptos Notas"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_ConceptosNotas"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_CntConceptosNotas"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:lines="1"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_OkConceptosNotas"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_ErrConceptosNotas"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_CanalSubCanal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text="CanalSubCanal"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_CanalSubCanal"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_CntCanalSubCanal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:lines="1"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_OkCanalSubCanal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textSize="10dp"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_ErrCanalSubCanal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_MovTipDir"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text="TipoDireccion"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_MovTipDir"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_CntMovTipDir"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:lines="1"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_OkMovTipDir"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_ErrMovTipDir"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_MovParMix"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text="Dcto Mix"
+                            android:textStyle="bold"
+                            tools:text="Dcto Mix" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_MovParMix"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_CntMovParMix"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:textSize="10dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_OkMovParMix"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:textSize="10dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_ErrMovParMix"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_MovParMixArticulos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text="Dcto Mix Articulos"
+                            android:textStyle="bold"
+                            tools:text="Dcto Mix Articulos" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_MovParMixArticulos"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_CntMovParMixArticulos"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+
+                                android:lines="1"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_OkMovParMixArticulos"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_ErrMovParMixArticulos"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_MovParMixBonificados"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text="Dcto Mix Bonificado"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_MovParMixBonificados"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_CntMovParMixBonificados"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:lines="1"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_OkMovParMixBonificados"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:textSize="10dp"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_ErrMovParMixBonificados"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_ventaxlinea"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text="Historial Ventas"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_ventaxlinea"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_Cntventaxlinea"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:lines="1"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_Okventaxlinea"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:textSize="10dp"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_Errventaxlinea"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_movparlinea"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text="Dcto Linea"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_movparlinea"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_Cntmovparlinea"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:textSize="10dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_Okmovparlinea"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:textSize="10dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_Errmovparlinea"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_movparart"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text="Dcto Articulo"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_movparart"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_Cntmovparart"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:lines="1"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_Okmovparart"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:textSize="10dp"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_Errmovparart"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+
+                        <TextView
+                            android:id="@+id/txt_movparval"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text="Dcto x Valor"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_movparval"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_Cntmovparval"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:textSize="10dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_Okmovparval"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_Errmovparval"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_controlventas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text=" Control Ventas"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_controlventas"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_Cntcontrolventas"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:textSize="10dp"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_Okcontrolventas"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_Errcontrolventas"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_Bonificadosdet"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text="Precios y presentaciones"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_Bonificadosdet"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_CntBonificadosdet"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:lines="1"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_OkBonificadosdet"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_ErrBonificadosdet"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_ListasProGrupo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text="Listas x Grupo y Sub"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_ListasProGrupo"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_CntListasProGrupo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:textSize="10dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_OkListasProGrupo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:textSize="10dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_ErrListasProGrupo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_Versiones"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text="Versiones"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_Versiones"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_CntVersiones"
+                                android:layout_width="match_parent"
+                                android:textSize="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_OkVersiones"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:textSize="10dp"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_ErrVersiones"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borderlayaut"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_ListasPrecios"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:text="Versiones"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/PrBar_ListasPrecios"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="50px"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/borderlayautdelgado"
+                            android:divider="?attr/dividerVertical"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txt_CntListasPrecios"
+                                android:layout_width="match_parent"
+                                android:textSize="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/txt_OkListasPrecios"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:textSize="10dp"
+                                android:text="0"
+                                android:textColor="@color/VerdeValido" />
+
+                            <TextView
+                                android:id="@+id/txt_ErrListasPrecios"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:lines="1"
+                                android:text="0"
+                                android:textColor="@color/colorAccent" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

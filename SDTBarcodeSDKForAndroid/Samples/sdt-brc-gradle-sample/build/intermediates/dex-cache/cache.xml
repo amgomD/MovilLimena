@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\SDKs\SDTBarcodeSetupAndroid\SDTBarcodeSDKForAndroid\Samples\sdt-brc-gradle-sample\app\src\main\libs\sdt-brc-android-natives.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ac1187791de70baf6476e3b3edac88c619baa561">
+        <dex dex="C:\SDKs\SDTBarcodeSetupAndroid\SDTBarcodeSDKForAndroid\Samples\sdt-brc-gradle-sample\app\build\intermediates\pre-dexed\debug\sdt-brc-android-natives-0560e04b026c44918576171ad6c479418205b3fd.jar" />
+    </item>
+    <item
+        jar="C:\SDKs\SDTBarcodeSetupAndroid\SDTBarcodeSDKForAndroid\Samples\sdt-brc-gradle-sample\app\src\main\libs\sdt-brc-android.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="57d7b3e6948681b6f086c3ad338d9cf2eb008020">
+        <dex dex="C:\SDKs\SDTBarcodeSetupAndroid\SDTBarcodeSDKForAndroid\Samples\sdt-brc-gradle-sample\app\build\intermediates\pre-dexed\debug\sdt-brc-android-43ae55f5ee3cb50175bcbc759fe3eef99026c5a0.jar" />
+    </item>
+
+</items>

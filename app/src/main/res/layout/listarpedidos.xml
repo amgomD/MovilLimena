@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/contenedorpedido"
+        android:layout_width="match_parent"
+        android:background="#FFFFFF"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_pedido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:text="Ped"
+                android:textColor="#1E3199"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                 />
+
+            <Button
+                android:id="@+id/compartir"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+
+                android:background="@drawable/bg_button"
+                android:drawableTint="#1E3199"
+                android:drawableStart="@android:drawable/ic_menu_share"/>
+            <Button
+                android:id="@+id/Json"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_button"
+                android:drawableTint="#1E3199"
+                android:drawableStart="@android:drawable/stat_notify_chat"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_nombrecliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cliente"
+            android:textColor="#263238"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/txt_nombrenegocio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:text="Negocio"
+            android:textColor="#546E7A"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:ellipsize="end" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+              android:layout_gravity="end"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_dialog_cargando"
+            android:backgroundTint="#89EFEBEB"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+
+                    android:gravity="center_vertical"
+                    android:paddingStart="8dp"
+
+                    android:text="Fecha Promesa de Entrega: "
+                    android:textColor="#232D64"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tvNuevaFecha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="8dp"
+
+                    android:text="Nueva fecha"
+                    android:textColor="#E91E63"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btnNuevaFecha"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/bg_dialog_cargando"
+                android:backgroundTint="#055494"
+                android:contentDescription="Seleccionar fecha"
+                android:src="@android:drawable/ic_menu_my_calendar" />
+
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/txt_bodega"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="TextView"
+            android:layout_weight="2"
+            android:visibility="gone"
+            android:textSize="12dp"
+            android:textColor="#9C27B0"
+            android:textStyle="bold" />
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:background="#F1F6FC"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp">
+
+                <TextView
+                    android:id="@+id/text20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Valor Pedido:"
+                    android:textColor="#607D8B"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_valorpedido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="0.00"
+                    android:textColor="#1565C0"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:background="#18E91E63"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Valor C.Malo:"
+                    android:textColor="#E91E63"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_creditomalo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="0.00"
+                    android:textColor="#E91E63"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:background="#1413857E"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp">
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Valor C.Bueno:"
+                    android:textColor="#009688"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_creditobueno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="0.00"
+                    android:textColor="#009688"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <!-- ========================== -->
+            <!-- ENVIADO -->
+            <!-- ========================== -->
+
+            <LinearLayout
+                android:id="@+id/contentenvalt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <CheckBox
+                    android:id="@+id/checkBox_envalt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:buttonTint="#43A047"
+                    android:clickable="false"
+                    android:text="Enviado"
+                    android:textColor="#455A64"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/pedenviado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:text="N"
+                    android:textColor="#607D8B"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="5dp">
+
+                    <TextView
+                        android:id="@+id/txt_porpedidoenvalt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0%"
+                        android:textColor="#9C27B0"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:maxLines="1" />
+
+                    <TextView
+                        android:id="@+id/txt_valorpedidoenvalt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0.00"
+                        android:textColor="#607D8B"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:maxLines="1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!-- ========================== -->
+            <!-- GENERADO -->
+            <!-- ========================== -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <CheckBox
+                    android:id="@+id/checkBox_enviado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:buttonTint="#1976D2"
+                    android:clickable="false"
+                    android:text="Generado"
+                    android:textColor="#455A64"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="5dp">
+
+                    <TextView
+                        android:id="@+id/txt_porpedidoenv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0%"
+                        android:textColor="#9C27B0"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:maxLines="1" />
+
+                    <TextView
+                        android:id="@+id/txt_valorpedidoenv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0.00"
+                        android:textColor="#607D8B"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:maxLines="1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_marginEnd="10dp"
+                android:id="@+id/button3Env"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/GrisTextoFondo"
+                android:background="@drawable/bg_button"
+                android:layout_weight="2"
+                android:text="Enviar" />
+            <Button
+                android:id="@+id/button4ver"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="2"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/GrisTextoFondo"
+                android:background="@drawable/bg_button"
+                android:text="Ver" />
+
+            <Button
+                android:id="@+id/btnEnvPen"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="2"
+                android:layout_marginEnd="10dp"
+
+                android:backgroundTint="@color/Color1"
+                android:text="Envio Alt"
+                android:background="@drawable/bg_button"
+                android:textColor="@color/Blanco" />
+            <ImageButton
+                android:id="@+id/btnBorrar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:layout_marginEnd="8dp"
+                android:src="@android:drawable/ic_menu_delete"
+                android:textColor="@android:color/white"
+                android:background="@drawable/bg_button_danger"/>
+            <Button
+                android:id="@+id/btnwhatsap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:backgroundTint="#4CAF50"
+                android:drawableLeft="@drawable/wasalogo"
+                android:text="Envio"
+                android:textColor="@color/Blanco"
+                android:visibility="gone" />
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

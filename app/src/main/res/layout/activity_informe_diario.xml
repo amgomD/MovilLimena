@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InformeDiario">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+android:padding="10dp"
+            android:gravity="start"
+            android:textColor="@color/Blanco"
+            android:background="@color/Color1"
+            android:textSize="16dp"
+            android:text="Ventas por cliente"
+            android:textStyle="normal"
+            android:visibility="visible" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="start"
+                android:textColor="#E91E63"
+                android:textSize="16dp"
+                android:layout_weight="1"
+                android:text="Detalle venta"
+                android:textStyle="normal"
+                android:visibility="visible" />
+                <EditText
+android:id="@+id/fechaventas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#E91E63"
+                    android:layout_weight="1"
+                    android:textAlignment="textEnd"
+                    android:textSize="12dp"
+                    android:text="Fecha"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:inputType="none"
+                    android:textStyle="normal"
+                    android:visibility="visible" />
+
+
+
+
+
+            </LinearLayout>
+            <TextView
+android:id="@+id/vendedor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="start"
+                android:textColor="@color/Negro"
+                android:textSize="13dp"
+                android:text="Vendedor"
+                android:textStyle="normal"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_resumenporlinea"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FF5722"
+            android:drawableLeft="@android:drawable/checkbox_on_background"
+            android:text="Resumen Por Linea"
+            android:textColor="@color/Blanco" />
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TableLayout
+                android:id="@+id/tabla"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1"
+                android:padding="10dp">
+
+                <!-- Encabezado -->
+                <TableRow>
+
+                    <TextView
+                        android:text="ID#"
+                        android:background="@color/Color1"
+                        android:textColor="@color/Blanco"
+
+                        android:padding="10dp"/>
+
+                    <TextView
+                        android:text="Cliente"
+
+                        android:background="@color/Color1"
+                        android:textColor="@color/Blanco"
+                        android:padding="10dp"/>
+
+                    <TextView
+                        android:text="Total"
+                        android:background="@color/Color1"
+                        android:textColor="@color/Blanco"
+
+                        android:padding="10dp"/>
+
+                </TableRow>
+
+
+
+
+            </TableLayout>
+
+        </ScrollView>
+
+
+
+
+        <TableLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1"
+            android:padding="10dp">
+            <TableRow>
+
+                <TextView
+                    android:text=""
+                    android:layout_span="2"/>
+                <TextView
+                    android:id="@+id/totalpedido"
+                    android:text="TOTAL: $0"
+                    android:textStyle="bold"
+                    android:gravity="end"
+                    android:padding="6dp"/>
+
+            </TableRow>
+        </TableLayout>
+
+
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/Color1"
+                    android:padding="5dp"
+                    android:text="Subtotal "
+                    android:textColor="@color/Blanco"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_abonoori"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="TextView"
+                    android:textColor="@color/GrisLetra"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text333"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/Color1"
+                    android:padding="5dp"
+                    android:text="Iva"
+                    android:textColor="@color/Blanco"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_retencion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="TextView"
+                    android:textColor="@color/GrisLetra"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text3333"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/Color1"
+                    android:padding="5dp"
+                    android:text="Total"
+                    android:textColor="@color/Blanco"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_neto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="TextView"
+                    android:textColor="@color/GrisLetra"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/VerdeValido"
+                    android:padding="5dp"
+                    android:text="Total Clientes"
+                    android:textColor="@color/Blanco"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textImpa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/VerdeValido"
+                    android:padding="5dp"
+                    android:text="Impactados"
+                    android:textColor="@color/Blanco"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/VerdeValido"
+                    android:padding="5dp"
+                    android:text="Efectividad"
+                    android:textColor="@color/Blanco"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_clientes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/Blanco"
+                    android:padding="5dp"
+                    android:text="Total Clientes"
+                    android:textColor="@color/GrisLetra"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_impactados"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/Blanco"
+                    android:padding="5dp"
+                    android:text="Impactados"
+                    android:textColor="@color/GrisLetra"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_efectividad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/Blanco"
+                    android:padding="5dp"
+                    android:text="Efectividad"
+                    android:textColor="@color/GrisLetra"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

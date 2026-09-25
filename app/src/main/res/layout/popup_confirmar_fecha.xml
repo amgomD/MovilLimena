@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/bg_dialog_cargando">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirmar cambio de fecha"
+        android:textColor="#111827"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="Pedido"
+        android:textColor="#6B7280"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvPedidoPopup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pedido #0000"
+        android:textColor="#111827"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="Fecha actual de alistamiento"
+        android:textColor="#6B7280"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvFechaActualPopup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2026-09-07"
+        android:textColor="#E91E63"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="Nueva fecha seleccionada"
+        android:textColor="#6B7280"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvNuevaFechaPopup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2026-09-10"
+        android:textColor="#2196F3"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <!-- BOTONES -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="CANCELAR" />
+
+
+        <Button
+            android:id="@+id/btnConfirmar"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginStart="8dp"
+            android:text="CONFIRMAR"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2196F3" />
+
+    </LinearLayout>
+
+</LinearLayout>

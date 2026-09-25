@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/framecompleto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".InfoConsigna">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Información"
+                    android:textSize="28dp"
+                    android:layout_weight="1"
+                    android:textStyle="normal"
+                    android:textColor="@color/Negro"/>
+                <TextView
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:text="Información de la consignación."
+                    android:layout_weight="1"
+                    android:textSize="15dp"
+                    android:textColor="@color/GrisLetra"/>
+            </LinearLayout>
+            <Button
+                android:id="@+id/limpiarinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="Limpiar"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"
+                android:textColor="@color/Blanco"
+                android:backgroundTint="#1267AA"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@color/Blanco"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/Color1"
+                android:layout_marginTop="50px"
+
+                android:text="Valor consignación"/>
+
+            <TextView
+                android:id="@+id/valorcon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textSize="25dp"
+                android:layout_marginBottom="50px"
+                android:textColor="@color/Negro"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+android:background="@color/Blanco"
+            android:gravity="center"
+
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="40px"
+                android:layout_gravity="center"
+android:background="@color/GrisBusqueda"
+                android:padding="5px"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:textStyle="bold"
+android:background="@color/Blanco"
+                    android:gravity="end"
+                    android:textColor="#E91E63"
+                    android:id="@+id/titulotipo"
+                    android:text="Entrega Tesoreria"/>
+
+                <Switch
+                    android:id="@+id/Tipocons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/GrisBusqueda"
+                android:gravity="center"
+                android:padding="5px"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:background="@color/Blanco"
+                    android:textColor="#0A9510"
+                    android:id="@+id/tituloprove"
+                    android:text="Entrega Proveedor"/>
+
+                <Switch
+                    android:id="@+id/Proveedor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:theme="@style/SCBSwitch" />
+                />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ConNro"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:textColor="@color/Blanco"
+            android:textAlignment="center"
+            android:background="#1267AA"
+            android:text="Con0021"/>
+        <LinearLayout
+            android:id="@+id/contproveedor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:textColor="@color/Blanco"
+                android:background="#4CAF50"
+                android:text="Proveedor"/>
+            <Spinner
+
+                android:id="@+id/spproveedor"
+                android:layout_width="match_parent"
+                android:textAlignment="textStart"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="1dp"
+                android:spinnerMode="dialog"
+                android:visibility="visible" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:textColor="@color/Blanco"
+            android:background="@color/Color1"
+            android:text="Cod. Banco"/>
+        <LinearLayout
+            android:id="@+id/infobanco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/NomBancod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:hint="Banco"
+                android:textColor="@color/Negro"
+                android:textSize="14dp" />
+
+            <EditText
+                android:id="@+id/codbancod"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/Negro"
+                android:enabled="false"
+                android:hint="Banco" />
+            <Button
+                android:id="@+id/btnbancos"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textAllCaps="false"
+                android:background="#1267AA"
+
+                android:text="Buscar"
+                android:textColor="@color/Blanco" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/tipoconsignalin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:textColor="@color/Blanco"
+                android:background="@color/Color1"
+                android:text="Tipo consignación"/>
+
+
+
+
+            <Spinner
+
+                android:id="@+id/tipoconsigna"
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="1dp"
+                android:spinnerMode="dialog"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Cuentabanco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:textColor="@color/Blanco"
+                android:background="@color/Color1"
+                android:text="Cuenta banco"/>
+            <Spinner
+                android:id="@+id/spcuenta"
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="1dp"
+                android:spinnerMode="dialog"
+                android:visibility="visible" />
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:textColor="@color/Blanco"
+                android:background="@color/Color1"
+                android:text="Ciudad"/>
+            <EditText
+                android:id="@+id/ctacheque"
+                android:visibility="gone"
+                android:layout_weight="1"
+                android:layout_width= "match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#E91E63"
+                android:ems="10"
+                android:hint="Valor"
+                android:textColor="@color/colorAccent"
+                android:inputType="numberDecimal"
+                android:numeric="decimal"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/infociudad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/ciudadcta"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/Negro"
+                android:enabled="false"
+                android:hint="Codigo" />
+
+            <EditText
+                android:id="@+id/ciudad"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/Negro"
+                android:enabled="false"
+                android:textSize="15dp"
+                android:hint="Ciudad" />
+            <Button
+                android:id="@+id/btnCiudad"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="Buscar"
+                android:textSize="14dp"
+                android:textAllCaps="false"
+                android:background="#1267AA"
+                android:textColor="@color/Blanco" />
+
+        </LinearLayout>
+        <Button
+            android:layout_gravity="bottom"
+            android:id="@+id/btnFotos"
+            android:layout_width="match_parent"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="Subir fotos (0)"
+            android:drawableLeft="@android:drawable/ic_menu_camera"
+            android:textSize="14dp"
+            android:textAllCaps="false"
+            android:background="#2196F3"
+            android:textColor="@color/Blanco" />
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:id="@+id/valdrofot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_marginBottom="50dp"
+        android:orientation="horizontal">
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:textStyle="bold"
+            android:background="@color/Blanco"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/Color1"
+            android:text="Valor comprobantes"/>
+        <TextView
+            android:id="@+id/valorfoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:background="@color/Blanco"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="15dp"
+            android:textColor="@color/Negro"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_gravity="bottom"
+        android:id="@+id/btnguardarcon"
+        android:layout_width="match_parent"
+        android:layout_weight="2"
+        android:layout_height="wrap_content"
+        android:text="Guardar consginación"
+        android:textSize="14dp"
+        android:textAllCaps="false"
+        android:backgroundTint="#1267AA"
+        android:textColor="@color/Blanco" />
+
+</FrameLayout>

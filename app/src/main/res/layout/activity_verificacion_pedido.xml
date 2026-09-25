@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:paddingTop="?attr/actionBarSize">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Importar pedido"
+    android:textSize="20dp"
+   android:layout_gravity="center"
+    android:gravity="center"
+    android:textColor="@color/Color1"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_marginTop="5dp"
+    android:orientation="horizontal">
+    <EditText
+        android:layout_weight="1"
+        android:id="@+id/NroFac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese el numero de pedido"/>
+    <Button
+        android:id="@+id/buscarnro"
+        android:text="Buscar"
+        android:textColor="@color/Blanco"
+        android:backgroundTint="@color/Color1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"/>
+
+</LinearLayout>
+        <TextView
+            android:id="@+id/Confirped"
+            android:textSize="25dp"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sin importar"/>
+</LinearLayout>

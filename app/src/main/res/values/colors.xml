@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#8A888A</color>
+    <color name="colorPrimaryDark">#0D91FF</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="Blanco">#FFFFFF</color>
+    <color name="Color1">#0D91FF</color>
+    <color name="Color2">#0CBEE8</color>
+    <color name="Color3">#00ECE8</color>
+    <color name="Color4">#0CE899</color>
+    <color name="Color5">#0DFF63</color>
+    <color name="VerdeValido">#7BB27D</color>
+    <color name="GrisLetra">#767676</color>
+    <color name="GrisBorde">#EDECEC</color>
+    <color name="GrisBusqueda">#F5F4F4</color>
+    <color name="Negro">#000000</color>
+    <color name="Amarillocajas">#F7F8CD</color>
+    <color name="GrisTextoFondo">#CFCDCD</color>
+    <color name="Trasparente">#00FFFFFF</color>
+    <color name="TrasparenteGris">#56010101</color>
+</resources>

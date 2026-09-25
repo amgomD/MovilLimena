@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/TrasparenteGris"
+    android:padding="15dp"
+    tools:context=".ConfirmarRecibo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@color/Blanco"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:background="@color/Blanco"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="@color/Negro"
+                android:textAlignment="center"
+                android:text="Confirmar envio de recibos"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/GrisBusqueda"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                >
+                <EditText
+                    android:id="@+id/correo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:hint="Correo"/>
+            </LinearLayout>
+
+
+
+            <ProgressBar
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnenviorec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:textColor="@color/Blanco"
+                android:backgroundTint="#2196F3"
+                android:text="Enviar" />
+            <Button
+                android:id="@+id/btncorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:textColor="@color/Blanco"
+                android:backgroundTint="#2196F3"
+                android:text="Enviar correo" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

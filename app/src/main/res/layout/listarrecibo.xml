@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/Factura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Factura"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/RecSaldo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Saldo"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/RecAbono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Abono"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Retencion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Reten"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Reteica"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Retica"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Descuento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Dcto"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</FrameLayout>

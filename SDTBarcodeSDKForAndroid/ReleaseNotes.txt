@@ -1,0 +1,184 @@
+2.1.149.1 (2016/06/15)
+- Fixed camera orientation handling when device is physical angle is 180
+- Various bugfixes
+
+2.1.148.1 (2016/01/21)
+- Added support to gradle
+
+2.1.145.1 (2015/10/26)
+- Increased recognition accuracy on QR-Code symbols
+- Fixed Code93 issue
+- Fixed Codebase recognition issue
+
+2.1.142.1 (2015/08/13)
+- Fixed license issue on Android 21 platform
+
+2.1.139.1 (2014/12/26)
+- In package sdt.brc.android the BarcodeScanActivityScanParameters class is replaced with BarcodeScanActivityScanParameters class
+- Fixed license upgrade key verification issue
+
+2.1.137.1 (2014/11/28)
+- Added x86 platform support
+
+2.1.136.1 (2014/11/16)
+- Fixed UPC-E recognition issue
+
+2.1.133.1 (2014/09/09)
+- Fixed Code39 recognition issue
+
+2.1.132.3 (2014/08/27)
+- Preview resolution patch
+
+2.1.132.1 (2014/08/22)
+- Fixed recognition performance issue
+
+2.1.131.1 (2014/08/08)
+- Fixed PDF417 symbol recognition issue
+
+2.1.129.1 (2014/08/06)
+- Fixed PDF417 rotated symbol recognition issue
+
+2.1.126.1 (2014/07/28)
+- Increased recognition accuracy of PDF417, Datamatrix and QRCode symbols
+
+2.1.124.1 (2014/06/12)
+- Increased 1D recognition speed on low resolution images
+- Fixed sample code
+
+2.1.123.1 (2014/06/15)
+- Added support to Samsung Galaxy S3 device
+- Increased 1D recognition accuracy on low resolution images
+- Fixed Code39 recognition issue
+
+2.1.122.1 (2014/05/25)
+- .Net assembly native code Version control 
+- Increased QR code symbols recognition accuracy 
+
+2.1.121.1
+- Increased barcodes recognition accuracy on distored images
+
+2.1.120.1
+- Fixed stability issue for Datamarix symbols
+
+2.1.118.1
+- Fixed Scanner camera preview scan area draw on mixed 1D & 2D barcode types
+
+2.1.117.1
+- Increased PDF417 recofnition accuracy
+- Fixed Scanner camera preview behaviour on multiple barocde symbol types
+
+2.1.116.1
+- Fixed Scanner camera preview best resolution choise
+- Increased QR Code read accuracy on noizy images
+
+2.1.115.1
+- Increased QR Code read accuracy 
+
+2.1.112.1
+- Fixed Datamatrix performance issue
+- Fixed Datamatrix recognition accuracy
+- Fixed Code 39 Recognition issue
+
+2.1.108.1
+- Optimized 1D barcodes scanning speed
+
+2.1.104.1
+- Fixed multiple QR-Codes detection
+
+2.1.101.1
+- Fixed Code128 FNC symbols issue
+
+2.1.99.1
+- Fixed Code 128 small quiet zone issue
+
+2.1.98.1
+- Fixed recognition of Code 39 symbols with double start symbol
+
+2.1.96.1
+- Fixed EAN13 accuracy issue
+
+2.1.93.1
+- Added support of mirrored images contained QR-Codes symbol
+
+2.1.91.1
+- Fixed QRCode decoding of certain non-ASCII symbols
+- Fixed Datamatrix distored find pattern symbol detection
+	
+2.1.88.1
+- Fixed License issue
+- Fixed Datamatrix distored symbol recognition
+
+2.1.87.1
+- Fixed Datamatrix barcode performance issue
+- Fixed QRCode numeric data decoding issue
+
+2.1.86.1
+- Fixed Datamatrix barcode position detection on image 
+- Fixed Datamatrix barcode recognition issues
+
+2.1.85.1
+- 1D Recognition accuracy improvements
+
+2.1.84.1
+- 1D Recognition accuracy improvements
+- Tablet device camera rotation issue fix
+
+2.1.83.1
+- Datamatrix 
+recognition improvements
+- PDF417 recognition improvements on defocused images
+
+2.1.82.1
+
+- Fixed multiple barcodes output.
+
+2.1.81.1
+- Increased +2 and +5 barcode recognition speed
+
+2.1.80.1
+- Fixed low contrast Datamatrix recognition issue
+- Increased +5 barcode recognition accuracy
+
+2.1.78.1
+- Increased recognition performance for 1D barcode images
+- MSI Checksum calculation fix
+
+2.1.77.1
+- Increased recognition accuracy of defocused 1D barcode images
+
+2.1.75.1
+- Code 128 recognition accuracy improvements
+
+2.1.72.1
+- UPC-E barcode symbol support added
+- MSI Plessey barcode symbol support
+- QR Code symbol version 2 recognition quality improvements
+- Datamatrix algorythm improvements
+
+2.1.65.1
+- PDF417 algorythm improvements
+
+2.1.64.1
+- Code39 algorythm improvements
+
+2.1.63.1
+- Code11 fix
+
+2.1.61.1
+- Licensing issues fix
+
+2.1.56.1
+- Fixed IntelliMail algorithm issue.
+
+2.1.53.1
+- Fixed EAN13 checksum issue. 
+
+2.1.50.1
+- Fixed trial activation issue. 
+
+2.1.48.1
+- Fixed critical issue related to result processing routine in VB6 smple. 
+
+2.1.47.1
+- Recognition accuracy improvements of PDF417 barcode types
+

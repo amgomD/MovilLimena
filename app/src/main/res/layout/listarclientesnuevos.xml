@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_nit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Nit"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Nombre"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/checkBox_enviado"
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:clickable="false"
+                    android:text="Enviado"
+                    android:visibility="visible" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_creado"
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:clickable="false"
+                    android:text="Creado"
+                    android:visibility="visible" />
+                <CheckBox
+                    android:id="@+id/rechazado"
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:clickable="false"
+                    android:text="Rechazado"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_respuesta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1"
+                android:lines="5"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:visibility="visible">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

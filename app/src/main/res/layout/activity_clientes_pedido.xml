@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClientesPedido">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+
+
+        <ListView
+            android:id="@+id/list_clientes"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="1dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/Blanco"
+            android:orientation="horizontal">
+
+
+
+
+
+            <SearchView
+                android:id="@+id/search_clientes"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="@color/GrisBorde" />
+            <Button
+                android:id="@+id/filtrociudad"
+                android:layout_width="250px"
+                android:layout_weight="1.9"
+                android:textSize="12dp"
+                android:textAllCaps="false"
+                android:textColor="@color/Blanco"
+                android:background="#FF0D91FF"
+                android:layout_height="match_parent"
+                android:drawableEnd="@android:drawable/ic_menu_mapmode"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:background="@color/Blanco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#0C77CC"
+                android:layout_weight="1"
+                android:id="@+id/ciudadele"
+                android:padding="5dp"
+                android:text="Todos"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#0C77CC"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:id="@+id/ciucodele"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:text=""/>
+
+            <ImageButton
+                android:id="@+id/limpiar"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:layout_weight="10"
+                android:background="@color/Blanco"
+                app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA"
+    tools:context=".ResumenPedidosDia">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- ====================================================== -->
+        <!-- ENCABEZADO / ACCIONES -->
+        <!-- ====================================================== -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="6dp"
+            android:gravity="center_vertical">
+
+            <Button
+                android:background="@drawable/bg_button_card"
+                android:id="@+id/btn_enviarpedidos"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:backgroundTint="#2196F3"
+                android:drawableLeft="@android:drawable/ic_menu_save"
+                android:drawablePadding="8dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:text="Enviar pedidos/Notas"
+                android:textAllCaps="false"
+                android:textColor="@color/Blanco"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/recargar"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_dialog_cargando"
+                android:backgroundTint="#FFFFFF"
+                android:contentDescription="Recargar"
+                android:padding="10dp"
+                android:tint="#2196F3"
+                app:srcCompat="@android:drawable/ic_popup_sync" />
+
+        </LinearLayout>
+
+
+        <!-- ====================================================== -->
+        <!-- RESUMEN -->
+        <!-- ====================================================== -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="6dp">
+
+            <!-- PEDIDOS -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_dialog_cargando"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="# Pedidos"
+                    android:textAlignment="center"
+                    android:textColor="#607D8B"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_numpedidosnuevo"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="$0"
+                    android:textAlignment="center"
+                    android:textColor="#2A2C2A"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <!-- VALOR -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_dialog_cargando"
+                android:elevation="2dp"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/Valor"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Subtotal"
+                    android:textColor="#607D8B"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+
+                    android:id="@+id/txt_neto"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="$ 0.00"
+                    android:textColor="#263238"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <!-- % ENVÍO -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/bg_dialog_cargando"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Total"
+                    android:textAlignment="center"
+                    android:textColor="#607D8B"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:id="@+id/txt_abonoori"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="$ 0"
+                    android:textAlignment="center"
+                    android:textColor="#43A047"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- ====================================================== -->
+        <!-- TOTALES -->
+        <!-- ====================================================== -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/bg_dialog_cargando"
+            android:elevation="2dp"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <!-- SUBTOTAL -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="58dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp">
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Subtotal"
+                    android:textColor="#78909C"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_porenvio7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="0.00"
+                    android:textColor="#263238"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <!-- IVA -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="58dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="IVA"
+                    android:textColor="#78909C"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_retencion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="0.00"
+                    android:textColor="#263238"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <!-- IMPUESTO -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="58dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Impuesto"
+                    android:textColor="#78909C"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_retencionica"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="0.00"
+                    android:textColor="#263238"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <!-- TOTAL -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="58dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp">
+
+                <TextView
+                    android:id="@+id/textView118"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total"
+                    android:textColor="#78909C"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_porenvio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="$ 0.00"
+                    android:textColor="#2E7D32"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- ====================================================== -->
+        <!-- FECHA -->
+        <!-- ====================================================== -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_dialog_cargando"
+            android:elevation="2dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fecha"
+                android:textColor="#607D8B"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtFecha"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingStart="14dp"
+                android:paddingEnd="8dp"
+                android:text="07/09/2026"
+                android:textColor="#263238"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btnFechaConsulta"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="@drawable/bg_dialog_cargando"
+                android:backgroundTint="#1976D2"
+                android:contentDescription="Seleccionar fecha"
+                android:padding="9dp"
+                android:tint="@color/Blanco"
+                android:src="@android:drawable/ic_menu_my_calendar" />
+
+        </LinearLayout>
+
+
+        <!-- ====================================================== -->
+        <!-- LISTA DE PEDIDOS -->
+        <!-- ====================================================== -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_dialog_cargando"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:text="Pedidos del día"
+                android:textColor="#455A64"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:clipToPadding="false"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <ListView
+                    android:id="@+id/listview_pedidosenviados"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="#ECEFF1"
+                    android:dividerHeight="1dp"
+                    android:scrollbars="none"
+                    android:smoothScrollbar="false" />
+
+            </ScrollView>
+
+        </LinearLayout>
+
+
+        <!-- ====================================================== -->
+        <!-- ELEMENTOS OCULTOS QUE YA EXISTÍAN -->
+        <!-- ====================================================== -->
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textView119"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Num" />
+
+            <TextView
+                android:id="@+id/txt_numpedidos2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResumenPedidosDia">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/miFotoEnvio"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:visibility="gone"
+            android:src="@android:drawable/ic_menu_camera" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           android:visibility="gone"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_Capturar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#E91E63"
+                android:drawableLeft="@android:drawable/ic_menu_camera"
+                android:text="Capturar soporte"
+                android:textColor="@color/Blanco" />
+
+            <Button
+                android:id="@+id/btn_EmviarSoporte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#FF9800"
+                android:drawableLeft="@android:drawable/ic_media_play"
+                android:text="Capturar soporte"
+                android:textColor="@color/Blanco" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_enviarpedidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#8BC34A"
+                android:drawableLeft="@android:drawable/ic_menu_save"
+                android:text="Enviar recibos de caja"
+                android:textColor="@color/Blanco" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/Valor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:background="@color/Amarillocajas"
+                    android:lines="1"
+                    android:padding="2dp"
+                    android:text="(-)Valor"
+                    android:textColor="@color/Color1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_porenvio7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:background="@color/Blanco"
+                    android:lines="1"
+                    android:padding="2dp"
+                    android:text="Sub"
+                    android:textColor="@color/GrisLetra"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:background="@color/Color1"
+                    android:lines="1"
+                    android:padding="2dp"
+                    android:text="% Envio"
+                    android:textColor="@color/Blanco"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_porenvio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:background="@color/Blanco"
+                    android:lines="1"
+                    android:padding="2dp"
+                    android:text="Sub"
+                    android:textColor="@color/GrisLetra"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView119"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/GrisLetra"
+                    android:lines="1"
+                    android:padding="2dp"
+                    android:text="Num"
+                    android:textColor="@color/Blanco"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_numpedidos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/Blanco"
+                    android:lines="1"
+                    android:padding="2dp"
+                    android:text="Total"
+                    android:textColor="@color/GrisLetra"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/GrisLetra"
+                        android:lines="1"
+                        android:padding="2dp"
+                        android:text="Abono"
+                        android:textColor="@color/Blanco"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_abonoori"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/Blanco"
+                        android:lines="1"
+                        android:padding="2dp"
+                        android:text="Sub"
+                        android:textColor="@color/GrisLetra"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/GrisLetra"
+                        android:lines="1"
+                        android:padding="2dp"
+                        android:text="Retencion"
+                        android:textColor="@color/Blanco"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_retencion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/Blanco"
+                        android:lines="1"
+                        android:padding="2dp"
+                        android:text="iva"
+                        android:textColor="@color/GrisLetra"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/GrisLetra"
+                        android:lines="1"
+                        android:padding="2dp"
+                        android:text="ReteIca."
+                        android:textColor="@color/Blanco"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_retencionica"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/Blanco"
+                        android:lines="1"
+                        android:padding="2dp"
+                        android:text="impo"
+                        android:textColor="@color/GrisLetra"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_totaldesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/GrisLetra"
+                        android:lines="1"
+                        android:padding="2dp"
+                        android:text="Descuento"
+                        android:textColor="@color/Blanco"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_descuentos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/Blanco"
+                        android:lines="1"
+                        android:padding="2dp"
+                        android:text="Total"
+                        android:textColor="@color/GrisLetra"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView118"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/GrisLetra"
+                        android:lines="1"
+                        android:padding="2dp"
+                        android:text="Total"
+                        android:textColor="@color/Blanco"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_neto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/Blanco"
+                        android:lines="1"
+                        android:padding="2dp"
+                        android:text="Total"
+                        android:textColor="@color/GrisLetra"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listview_pedidosenviados"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="10" />
+
+    </LinearLayout>
+
+</FrameLayout>

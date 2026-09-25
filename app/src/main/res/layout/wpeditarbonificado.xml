@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="400dp"
+        android:layout_height="700dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@drawable/bg_button"
+        android:elevation="10dp">
+
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/Negro"
+            android:text="Bonificados del articulo"
+            android:textStyle="normal"
+            android:textSize="18sp"/>
+
+
+    <ListView
+        android:id="@+id/bonificadoslist"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="afterDescendants"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
+
+
+        <Button
+            android:id="@+id/btnguardarbon"
+            android:layout_width="match_parent"
+            android:background="@drawable/bg_button_sinco"
+            android:textColor="@color/Blanco"
+            android:layout_height="wrap_content"
+            android:text="Guardar"/>
+
+
+
+    </LinearLayout>

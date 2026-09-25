@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="40dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView63"
+            android:layout_width="match_parent"
+            android:textSize="60px"
+            android:textAlignment="center"
+            android:layout_marginBottom="0dp"
+            android:textColor="@color/Negro"
+            android:layout_height="wrap_content"
+            android:text="Seleccionar fecha" />
+        <TextView
+            android:layout_width="match_parent"
+            android:textSize="40px"
+            android:textAlignment="center"
+            android:layout_marginBottom="0dp"
+            android:textColor="@color/GrisLetra"
+            android:layout_height="wrap_content"
+            android:text="Se filtrarán los pedidos de la fecha seleccionada" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <Spinner
+                android:id="@+id/spinnerMes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/inputAnio"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:hint="Año"
+                android:inputType="number"/>
+
+            <Button
+                android:id="@+id/btnAplicarFecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="Actualizar"/>
+        </LinearLayout>
+
+
+        <CalendarView
+            android:layout_margin="20dp"
+            android:id="@+id/Calendario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:textSize="60px"
+            android:textAlignment="center"
+            android:layout_marginBottom="0dp"
+            android:textColor="@color/Negro"
+            android:layout_height="wrap_content"
+            android:text="Fecha seleccionada" />
+        <TextView
+            android:id="@+id/FechaSel"
+            android:layout_width="match_parent"
+            android:textSize="60px"
+            android:textAlignment="center"
+            android:layout_marginBottom="0dp"
+            android:textColor="@color/colorAccent"
+            android:layout_height="wrap_content"
+            android:text="20222223" />
+
+        <Button
+            android:id="@+id/verPedidos"
+            android:layout_margin="30dp"
+            android:background="@color/Color1"
+            android:textColor="@color/Blanco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ver pedidos" />
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

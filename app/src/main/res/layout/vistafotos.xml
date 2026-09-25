@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/framecompleto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SubirFotos">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@color/Blanco"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/Color1"
+                android:layout_marginTop="50px"
+
+                android:text="Valor consignación"/>
+
+            <TextView
+                android:id="@+id/valorcon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textSize="25dp"
+                android:layout_marginBottom="50px"
+                android:textColor="@color/Negro"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/regoperacont"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:background="#D0F3B1"
+                    android:textSize="15dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/Negro"
+                    android:padding="4dp"
+                    android:layout_weight="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Soporte"/>
+                <EditText
+                    android:id="@+id/numeroop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="30dp"
+                    android:backgroundTint="#E91E63"
+                    android:ems="10"
+                    android:hint="Identificador foto"
+                    android:textColor="@color/colorAccent"
+                    android:inputType="text"
+                    android:numeric="decimal"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:background="#D0F3B1"
+                    android:textSize="15dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/Negro"
+                    android:padding="4dp"
+                    android:layout_weight="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Valor"/>
+                <EditText
+                    android:id="@+id/valorop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="30dp"
+                    android:backgroundTint="#E91E63"
+                    android:ems="10"
+                    android:hint="Valor operación"
+                    android:textColor="#4CAF50"
+                    android:inputType="number"
+                    android:numeric="decimal"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/imagedetails"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/cambiofoto"
+            android:layout_width="match_parent"
+            android:text = "N"
+
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+        <ImageView
+            android:id="@+id/MiFotoEnvio"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@android:drawable/ic_menu_camera" />
+        <Button
+            android:id="@+id/guardarlist"
+            android:background="#4CAF50"
+            android:textColor="@color/Blanco"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_margin="5dp"
+            android:text="Guardar fotos" />
+        <Button
+            android:id="@+id/guardarfotocon"
+            android:background="#2196F3"
+            android:textColor="@color/Blanco"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_margin="5dp"
+            android:text="Guardar fotos" />
+        <ListView
+            android:id="@+id/listafoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/Guardarreg"
+        android:background="#2196F3"
+        android:textColor="@color/Blanco"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_gravity="bottom"
+        android:layout_height="100px"
+        android:layout_margin="10dp"
+        android:text="Finalizar" />
+
+
+</FrameLayout>

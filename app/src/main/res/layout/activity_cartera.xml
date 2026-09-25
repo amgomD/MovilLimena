@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/framecompleto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/GrisBusqueda"
+    tools:context=".Cartera">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <!-- ================================================= -->
+        <!-- ENCABEZADO                                      -->
+        <!-- ================================================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@color/Color1"
+            android:gravity="center_vertical"
+
+            android:orientation="horizontal"
+            android:paddingStart="14dp"
+            android:paddingEnd="10dp">
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cartera"
+                android:textColor="@color/Blanco"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/Recibos"
+                android:layout_width="145dp"
+                android:layout_height="42dp"
+                android:backgroundTint="#4CAF50"
+                android:elevation="2dp"
+                android:text="RECIBO CAJA"
+                android:textColor="@color/Blanco"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/Imprimir"
+                android:layout_width="120dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="#03A9F4"
+                android:drawableLeft="@android:drawable/ic_input_get"
+                android:text="IMPRIMIR"
+                android:textColor="@color/Blanco"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+        <!-- ================================================= -->
+        <!-- TABS                                             -->
+        <!-- ================================================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/Blanco"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/Amarillocajas"
+                android:gravity="center"
+                android:text="Cartera general"
+                android:textColor="@color/GrisLetra"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/txtview154"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/GrisBorde"
+                android:gravity="center"
+                android:text="Abonos"
+                android:textColor="@color/GrisLetra"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/txtview1543"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/GrisBusqueda"
+                android:gravity="center"
+                android:text="Cartera compartida"
+                android:textColor="@color/GrisLetra"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+        <!-- ================================================= -->
+        <!-- RESUMEN DE CARTERA                               -->
+        <!-- ================================================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/Blanco"
+            android:orientation="horizontal"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp">
+
+            <!-- TOTAL CARTERA -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total cartera"
+                    android:textColor="@color/GrisLetra"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/txt_carteragen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$ 0"
+                    android:textColor="@color/Negro"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+
+            <!-- SEPARADOR -->
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@color/GrisBorde" />
+
+
+            <!-- TOTAL ABONADO -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingStart="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total abonado"
+                    android:textColor="@color/GrisLetra"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/txt_carteraabonada"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$ 0"
+                    android:textColor="#E91E63"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+
+            <!-- SWITCH CARTERA COMPARTIDA -->
+
+            <Switch
+                android:id="@+id/cartercompa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+        <!-- ================================================= -->
+        <!-- LISTADO                                         -->
+        <!-- ================================================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/GrisBusqueda"
+            android:orientation="vertical"
+            android:paddingTop="4dp">
+
+            <ListView
+                android:id="@+id/ListViewCartera"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0dp"
+                android:paddingBottom="6dp"
+                android:scrollbars="vertical" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,977 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/framecompleto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormaPago">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:background="@color/Blanco"
+        android:orientation="vertical">
+
+        <LinearLayout
+
+            android:id="@+id/todo"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Blanco"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@color/Blanco"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:background="#4CAF50"
+                        android:padding="10dp"
+                        android:textSize="15dp"
+
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Total recibo"/>
+                    <TextView
+                        android:id="@+id/totalrecibo"
+                        android:padding="10dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:background="@color/GrisBusqueda"
+                        android:text="0"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/btntrans"
+                        android:background="@color/Color1"
+                        android:textSize="15dp"
+                        android:textColor="@color/Blanco"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Transferencia"/>
+                    <TextView
+                        android:id="@+id/totaltransferencia"
+                        android:padding="10dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:background="@color/GrisBusqueda"
+                        android:text="0"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/btnconsignar"
+                        android:background="@color/Color1"
+                        android:textSize="15dp"
+                        android:textColor="@color/Blanco"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Consignación"/>
+                    <TextView
+                        android:id="@+id/totalconsignacion"
+                        android:padding="10dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:background="@color/GrisBusqueda"
+                        android:text="0"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/btncheque"
+                        android:background="@color/Color1"
+
+                        android:textSize="15dp"
+                        android:textColor="@color/Blanco"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Cheque"/>
+                    <TextView
+                        android:id="@+id/totalCheque"
+                        android:padding="10dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:background="@color/GrisBusqueda"
+                        android:text="0"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/btnefectivo"
+                        android:background="@color/Color1"
+
+                        android:textSize="15dp"
+                        android:textColor="@color/Blanco"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Efectivo"/>
+                    <TextView
+                        android:id="@+id/TotalEfecttivo"
+                        android:padding="10dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:background="@color/GrisBusqueda"
+                        android:text="0"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+
+                    android:orientation="horizontal">
+                    <TextView
+                        android:background="#4CAF50"
+                        android:padding="10dp"
+                        android:textSize="15dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Total Formapago"/>
+                    <TextView
+                        android:id="@+id/totalfp"
+                        android:padding="10dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:background="@color/GrisBusqueda"
+                        android:text="0"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_margin="10dp"
+                android:background="@color/GrisBorde"
+                />
+
+
+
+
+
+
+
+            <ListView
+                android:id="@+id/ListaFormapago"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/efectivo"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_margin="10dp"
+                    android:textSize="15dp"
+                    android:textColor="@color/Negro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Efectivo"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:background="@color/Amarillocajas"
+                        android:textSize="15dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/Negro"
+                        android:gravity="center"
+                        android:layout_width="150dp"
+                        android:layout_weight="2"
+                        android:layout_height="match_parent"
+                        android:text="Total agregado"/>
+
+                    <TextView
+                        android:background="@color/Amarillocajas"
+                        android:textSize="15dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/Negro"
+                        android:gravity="center"
+                        android:layout_width="150dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:text="Valor"/>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/totalrecibo2"
+                        android:background="@color/GrisBusqueda"
+                        android:textSize="15dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/Negro"
+                        android:gravity="center"
+                        android:layout_weight="2"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:text="0"/>
+
+                    <EditText
+                        android:id="@+id/cicuenta"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="#E91E63"
+                        android:hint="Valor"
+                        android:textColor="@color/colorAccent"
+                        android:inputType="numberDecimal"
+                        android:numeric="decimal"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:background="@color/Amarillocajas"
+                        android:textSize="15dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/Negro"
+                        android:gravity="center"
+                        android:layout_width="150dp"
+                        android:layout_weight="2"
+                        android:layout_height="match_parent"
+                        android:text="Total digitado"/>
+
+                    <TextView
+                        android:id="@+id/totaldig"
+                        android:background="@color/GrisBusqueda"
+                        android:textSize="15dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/Negro"
+                        android:gravity="center"
+                        android:layout_weight="2"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:text="0"/>
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/agregarefectivo"
+                        android:background="@color/Color1"
+                        android:padding="4dp"
+                        android:textSize="15dp"
+                        android:textColor="@color/Blanco"
+                        android:layout_width="150dp"
+                        android:layout_margin="2dp"
+                        android:layout_height="wrap_content"
+                        android:text="Agregar"/>
+                    <Button
+                        android:id="@+id/volverefectivo"
+                        android:background="@color/colorAccent"
+                        android:padding="4dp"
+                        android:textSize="15dp"
+                        android:layout_margin="2dp"
+                        android:textColor="@color/Blanco"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Volver"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/chequeconsigna"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/Formapago"
+                    android:textAlignment="center"
+                    android:layout_margin="10dp"
+                    android:textSize="15dp"
+                    android:textColor="@color/Negro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Forma elegida"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:background="#FFF38D"
+                        android:padding="4dp"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/Negro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Total recibo"/>
+                    <TextView
+                        android:id="@+id/totalrecibo3"
+                        android:padding="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:background="@color/GrisBusqueda"
+                        android:text="0"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:background="#FFF38D"
+                        android:padding="4dp"
+                        android:textSize="15dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/Negro"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Total agregado"/>
+                    <TextView
+                        android:id="@+id/totalagregado"
+                        android:padding="4dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:background="@color/GrisBusqueda"
+                        android:text="0"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="#F7FFAD"
+                        android:padding="4dp"
+                        android:id="@+id/fechaconche"
+                        android:text="Fecha"
+                        android:textAlignment="center"
+                        android:textColor="@color/Negro"
+                        android:textSize="15dp" />
+
+                    <RadioGroup
+                        android:id="@+id/radiogrupo"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="1"
+
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <RadioButton android:id="@+id/aldia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Al dia"/>
+                        <RadioButton android:id="@+id/postfechado"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="postfechado"/>
+                    </RadioGroup>
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:layout_height="1dp"
+                    android:background="@color/GrisBusqueda"/>
+                <LinearLayout
+                    android:background="@color/GrisBusqueda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <Spinner
+
+                        android:id="@+id/ano"
+                        android:layout_width="120dp"
+                        android:textAlignment="center"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="1dp"
+                        android:spinnerMode="dialog"
+                        android:visibility="visible" />
+
+
+                    <Spinner
+                        android:id="@+id/mes"
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="1dp"
+                        android:spinnerMode="dialog"
+                        android:visibility="visible" />
+                    <Spinner
+                        android:id="@+id/dia"
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="1dp"
+                        android:spinnerMode="dialog"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:layout_height="1dp"
+                    android:background="@color/GrisBusqueda"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:background="#B3DDFF"
+
+                        android:textSize="15dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/Negro"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cod Banco"/>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/infobanco"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/NomBancod"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/Negro"
+                        android:enabled="false"
+                        android:hint="Banco" />
+                    <EditText
+                        android:id="@+id/codbancod"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/Negro"
+                        android:enabled="false"
+                        android:hint="Banco" />
+                    <Button
+                        android:id="@+id/btnbancos"
+                        android:layout_width="match_parent"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#03A9F4"
+                        android:textSize="35px"
+                        android:text="Buscar"
+                        android:textColor="@color/Blanco" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/tipoconsignalin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:background="#B3DDFF"
+
+                        android:textSize="15dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/Negro"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tipo consignación"/>
+
+
+                    <Spinner
+
+                        android:id="@+id/tipoconsigna"
+                        android:layout_width="match_parent"
+                        android:textAlignment="center"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="1dp"
+                        android:spinnerMode="dialog"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Cuentabanco"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:background="#B3DDFF"
+
+                        android:textSize="15dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/Negro"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cuenta banco"/>
+                    <Spinner
+                        android:id="@+id/spcuenta"
+                        android:layout_width="match_parent"
+                        android:textAlignment="center"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="1dp"
+                        android:spinnerMode="dialog"
+                        android:visibility="visible" />
+
+
+
+                </LinearLayout>
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:layout_height="1dp"
+                    android:background="@color/GrisBusqueda"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/txtciudadcta"
+                        android:background="#FFF38D"
+                        android:padding="4dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/Negro"
+                        android:gravity="center"
+                        android:text="Ciudad"/>
+                    <EditText
+                        android:id="@+id/ctacheque"
+                        android:visibility="gone"
+                        android:layout_weight="1"
+                        android:layout_width= "match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="#E91E63"
+                        android:ems="10"
+                        android:hint="Valor"
+                        android:textColor="@color/colorAccent"
+                        android:inputType="numberDecimal"
+                        android:numeric="decimal"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/infociudad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/ciudadcta"
+                        android:layout_width="match_parent"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/Negro"
+                        android:enabled="false"
+                        android:hint="Codigo" />
+
+                    <EditText
+                        android:id="@+id/ciudad"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/Negro"
+                        android:enabled="false"
+                        android:hint="Ciudad" />
+                    <Button
+                        android:id="@+id/btnCiudad"
+                        android:layout_width="match_parent"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#03A9F4"
+                        android:textSize="35px"
+                        android:text="Buscar"
+                        android:textColor="@color/Blanco" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/cambioregnum"
+                        android:background="#D0F3B1"
+                        android:textSize="15dp"
+                        android:textAlignment="center"
+
+                        android:textColor="@color/Negro"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Reg Operación"/>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <EditText
+                            android:id="@+id/RegOperacheque"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#E91E63"
+                            android:ems="10"
+                            android:hint="cheque"
+                            android:inputType="text"
+                            android:numeric="decimal"
+                            android:textColor="@color/colorAccent"
+                            android:textStyle="bold" />
+                    </FrameLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:padding="4dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#D0F3B1"
+                        android:gravity="center"
+                        android:text="Valor"
+                        android:textAlignment="center"
+                        android:textColor="@color/Negro"
+                        android:textSize="15dp" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        >
+                        <EditText
+                            android:id="@+id/valor"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:layout_marginTop="10dp"
+                            android:backgroundTint="#E91E63"
+                            android:ems="10"
+                            android:hint="Valor"
+                            android:textColor="@color/colorAccent"
+                            android:inputType="number"
+                            android:numeric="decimal"
+                            android:textStyle="bold" />
+                    </FrameLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:background="#D0F3B1"
+                        android:padding="4dp"
+                        android:textSize="15dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/Negro"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Total Digitado"/>
+                    <TextView
+                        android:id="@+id/totaldigcheque"
+                        android:padding="4dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:background="@color/GrisBusqueda"
+                        android:text="0"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:layout_height="1dp"
+                    android:background="@color/GrisBusqueda"/>
+                <LinearLayout
+                    android:id="@+id/regoperacont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:background="#D0F3B1"
+                        android:textSize="15dp"
+                        android:textAlignment="center"
+
+                        android:textColor="@color/Negro"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Reg Operación"/>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        >
+                        <EditText
+                            android:id="@+id/numeroop"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="10dp"
+                            android:backgroundTint="#E91E63"
+                            android:ems="10"
+                            android:hint="Valor"
+                            android:textColor="@color/colorAccent"
+                            android:inputType="text"
+                            android:numeric="decimal"
+                            android:textStyle="bold" />
+                    </FrameLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/imagedetails"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <Button
+                        android:id="@+id/verfotos"
+                        android:background="#009688"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:drawableEnd="@android:drawable/ic_menu_camera"
+                        android:textColor="@color/Blanco"
+                        android:layout_width="match_parent"
+                        android:layout_height="100px"
+                        android:layout_margin="5dp"
+                        android:text="Tomar Fotos" />
+          </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/agregarchequecon"
+                        android:background="@color/Color1"
+                        android:padding="4dp"
+                        android:textSize="15dp"
+                        android:textColor="@color/Blanco"
+                        android:layout_width="match_parent"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Agregar"/>
+                    <Button
+                        android:id="@+id/volvercheque"
+                        android:background="@color/colorAccent"
+                        android:padding="4dp"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:layout_margin="2dp"
+                        android:textColor="@color/Blanco"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Volver"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

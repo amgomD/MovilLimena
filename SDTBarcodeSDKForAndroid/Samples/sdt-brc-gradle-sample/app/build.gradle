@@ -1,0 +1,23 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 10
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "sample.sdt.barcode"
+        minSdkVersion 8
+        targetSdkVersion 8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile files('src/main/libs/sdt-brc-android.jar')
+    compile files('src/main/libs/sdt-brc-android-natives.jar')
+}
